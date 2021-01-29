@@ -9,12 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var radius = "1.0"
-    @State var sphereArea = ""
-    @State var sphereVolume = ""
-
-    @State var bbArea = ""
-    @State var bbVolume = ""
+    @State var radiusStr = "1.0"
+    @ObservedObject private var sphereModel = Sphere()
 
     var body: some View {
         VStack{
@@ -22,7 +18,7 @@ struct ContentView: View {
             Text("Radius")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("Radius", text: $radius, onCommit: {updateCalculations()})
+            TextField("Radius", text: $radiusStr, onCommit: {sphereModel.setRadius(radiusStr)})
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -33,7 +29,7 @@ struct ContentView: View {
             Text("Sphere Area")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $sphereArea)
+            TextField("", text: $sphereModel.surfaceAreaStr)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -42,7 +38,7 @@ struct ContentView: View {
             Text("Sphere Volume")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $sphereVolume)
+            TextField("", text: $sphereModel.volumeStr)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -53,7 +49,7 @@ struct ContentView: View {
             Text("Bounding Box Area")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $bbArea)
+            TextField("", text: $sphereModel.bbSurfaceAreaStr)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -62,29 +58,17 @@ struct ContentView: View {
             Text("Bounding Box Volume")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $bbVolume)
+            TextField("", text: $sphereModel.bbVolumeStr)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
                 .padding(.bottom, 50)
 
             //Calculate button area
-            Button("Calculate", action: {updateCalculations()})
+            Button("Calculate", action: {sphereModel.setRadius(radiusStr)})
                 .padding(.bottom)
                 .padding()
         }
-    }
-
-    func updateCalculations() {
-        //These are the calculations which need to be done every time a new radius is added
-            //Sphere
-            sphereArea = 4.0 * Double.pi * pow(Double(radius), 2) //4 * pi * r^2
-            sphereVolume = 4.0 / 3.0 * Double.pi * pow(Double(radius), 3) // 4/3 * pi * r^3
-
-            //Bounding Box
-            //Note: 2 * radius = bounding box side length
-            bbArea = 6 * pow(2 * Double(radius), 2) // 6 * (bounding box side length)^2
-            bbVolume = pow(2 * Double(radius), 3) // (bounding box side length)^3
     }
 }
 
