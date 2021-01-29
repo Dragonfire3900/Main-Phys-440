@@ -22,22 +22,14 @@ struct ContentView: View {
             Text("Radius")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("Radius", text: $radius, onCommit: {
-                //Sphere
-                sphereArea = 4.0 * Double.pi * Double(radius) * Double(radius)
-                sphereVolume = 4.0 / 3.0 * Double.pi * Double(radius) * Double(radius) * Double(radius)
-
-                //Bounding Box
-                bbArea = 6 * (2 * Double(radius)) * (2 * Double(radius))
-                bbVolume = (2 * Double(radius)) * (2 * Double(radius)) * (2 * Double(radius))
-            })
+            TextField("Radius", text: $radius, onCommit: {updateCalculations()})
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
                 .padding(.bottom, 50)
             
 
-            //Area Spot
+            //Sphere Spot
             Text("Sphere Area")
                 .padding(.top)
                 .padding(.bottom, 0)
@@ -47,20 +39,21 @@ struct ContentView: View {
                 .padding(.top, 0)
                 .padding(.bottom, 50)
 
-            Text("Bounding Box Area")
+            Text("Sphere Volume")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $bbArea)
+            TextField("", text: $sphereVolume)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
                 .padding(.bottom, 50)
 
-            //Volume Spot
-            Text("Sphere Volume")
+
+            //Bounding Box Spot
+            Text("Bounding Box Area")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("", text: $sphereVolume)
+            TextField("", text: $bbArea)
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -76,18 +69,22 @@ struct ContentView: View {
                 .padding(.bottom, 50)
 
             //Calculate button area
-            Button("Calculate", action: {
-                //Sphere
-                sphereArea = 4.0 * Double.pi * Double(radius) * Double(radius)
-                sphereVolume = 4.0 / 3.0 * Double.pi * Double(radius) * Double(radius) * Double(radius)
-
-                //Bounding Box
-                bbArea = 6 * (2 * Double(radius)) * (2 * Double(radius))
-                bbVolume = (2 * Double(radius)) * (2 * Double(radius)) * (2 * Double(radius))
-            })
+            Button("Calculate", action: {updateCalculations()})
                 .padding(.bottom)
                 .padding()
         }
+    }
+
+    func updateCalculations() {
+        //These are the calculations which need to be done every time a new radius is added
+            //Sphere
+            sphereArea = 4.0 * Double.pi * pow(Double(radius), 2) //4 * pi * r^2
+            sphereVolume = 4.0 / 3.0 * Double.pi * pow(Double(radius), 3) // 4/3 * pi * r^3
+
+            //Bounding Box
+            //Note: 2 * radius = bounding box side length
+            bbArea = 6 * pow(2 * Double(radius), 2) // 6 * (bounding box side length)^2
+            bbVolume = pow(2 * Double(radius), 3) // (bounding box side length)^3
     }
 }
 
