@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A062EEC725C4C23D00CC32CA /* Ellipsoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062EEC525C4C23D00CC32CA /* Ellipsoid.swift */; };
+		A062EEC825C4C23D00CC32CA /* Ellipsoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062EEC525C4C23D00CC32CA /* Ellipsoid.swift */; };
+		A062EEC925C4C23D00CC32CA /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062EEC625C4C23D00CC32CA /* Sphere.swift */; };
+		A062EECA25C4C23D00CC32CA /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062EEC625C4C23D00CC32CA /* Sphere.swift */; };
 		A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3A425C33BD100107940 /* Tests_iOS.swift */; };
 		A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3AF25C33BD100107940 /* Tests_macOS.swift */; };
 		A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */; };
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A062EEC525C4C23D00CC32CA /* Ellipsoid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipsoid.swift; sourceTree = "<group>"; };
+		A062EEC625C4C23D00CC32CA /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 		A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Phys_440App.swift; sourceTree = "<group>"; };
 		A0EFE38A25C33BCE00107940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0EFE38B25C33BD100107940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		A0EFE38825C33BCE00107940 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A062EEC525C4C23D00CC32CA /* Ellipsoid.swift */,
+				A062EEC625C4C23D00CC32CA /* Sphere.swift */,
 				A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */,
 				A0EFE38A25C33BCE00107940 /* ContentView.swift */,
 				A0EFE38B25C33BD100107940 /* Assets.xcassets */,
@@ -308,7 +316,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A062EEC725C4C23D00CC32CA /* Ellipsoid.swift in Sources */,
 				A0EFE3B425C33BD100107940 /* ContentView.swift in Sources */,
+				A062EEC925C4C23D00CC32CA /* Sphere.swift in Sources */,
 				A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +327,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A062EEC825C4C23D00CC32CA /* Ellipsoid.swift in Sources */,
 				A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */,
+				A062EECA25C4C23D00CC32CA /* Sphere.swift in Sources */,
 				A0EFE3B325C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
