@@ -7,27 +7,11 @@
 
 import SwiftUI
 
-class Circle: Ellipse {
+class Sphere: Ellipsoid {
     //Class variables
         //Published
-        @Published var radius: Double
-        @Published var radiusStr: String
-
-    //Initialization Functions
-        ///Init
-        ///  The Default initialization function
-        func init() {
-            self.setRadius(1.0)
-        }
-
-        ///Init
-        ///  The initialization of a sphere of arbitrary radius
-        ///  - Parameters:
-        ///    - Radius: The radius of the sphere
-        func init(Radius: Double) {
-            self.setRadius(Radius: Radius)
-        }
-
+        @Published var radius: Double = 1.0
+        @Published var radiusStr: String = ""
     
     //Setting Functions
         ///setRadius
@@ -36,12 +20,13 @@ class Circle: Ellipse {
         ///    - Radius: The radius of the sphere
         func setRadius(Radius: Double) -> Bool {
             //The radius must be positive
-            if (!self.setAxis(firstAxis: Radius, secondAxis: Radius, thirdAxis: Radius)) {
+            if (Radius < 0.0) {
                 return false
             }
 
             self.radius = Radius
             self.radiusStr = String(format: "%7.5f", self.radius)
+            self.setAxis(firstAxis: Radius, secondAxis: Radius, thirdAxis: Radius)
             return true
         }
 
@@ -50,7 +35,7 @@ class Circle: Ellipse {
         ///  - Parameters:
         ///    - Radius: A string representing the radius
         func setRadius(Radius: String) -> Bool {
-            return self.setRadius(Radius: Double(Radius))
+            return self.setRadius(Radius: Double(Radius)!)
         }
 
 
@@ -59,6 +44,6 @@ class Circle: Ellipse {
         ///  Calculates the surface area of the sphere
         override func calculateSSurfaceArea() {
             // Surface Area = 4 * pi * r ^ 2
-            self.setSSurfaceArea(4 * Double.pi * pow(self.radius, 2))
+            self.setSSurfaceArea(calcSA: 4.0 * Double.pi * pow(self.radius, 2.0))
         }
 }

@@ -18,7 +18,7 @@ struct ContentView: View {
             Text("Radius")
                 .padding(.top)
                 .padding(.bottom, 0)
-            TextField("Radius", text: $radiusStr, onCommit: {sphereModel.setRadius(radiusStr)})
+            TextField("Radius", text: $radiusStr, onCommit: {sphereModel.setRadius(Radius: radiusStr)})
                 .padding(.horizontal)
                 .frame(width: 200)
                 .padding(.top, 0)
@@ -63,9 +63,11 @@ struct ContentView: View {
                 .frame(width: 200)
                 .padding(.top, 0)
                 .padding(.bottom, 50)
-
+        }
+        
+        VStack {
             //Calculate button area
-            Button("Calculate", action: {sphereModel.setRadius(radiusStr)})
+            Button("Calculate", action: {sphereModel.setRadius(Radius: radiusStr)})
                 .padding(.bottom)
                 .padding()
         }

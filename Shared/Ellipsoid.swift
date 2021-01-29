@@ -11,39 +11,20 @@ class Ellipsoid: NSObject, ObservableObject {
 
     //Class variables
         //Internal variables
-        internal var firstAxisLength: Double
-        internal var secondAxisLength: Double
-        internal var thirdAxisLength: Double
+    internal var firstAxisLength: Double = 1.0
+        internal var secondAxisLength: Double = 1.0
+        internal var thirdAxisLength: Double = 1.0
 
         //Published
-        @Published var volume: Double
-        @Published var surfaceArea: Double
-        @Published var volumeStr: String
-        @Published var surfaceAreaStr: String
+        @Published var volume: Double = 1.0
+        @Published var surfaceArea: Double = 1.0
+        @Published var volumeStr: String = ""
+        @Published var surfaceAreaStr: String = ""
 
-        @Published var bbVolume: Double
-        @Published var bbSurfaceArea: Double
-        @Published var bbVolumeStr: String
-        @Published var bbSurfaceAreaStr: String
-    
-    //Initialization Functions
-        ///init
-        ///  Default initialization for an ellipsoid
-        func init() {
-            self.setAxis(firstAxis: 1.0, secondAxis: 1.0, thirdAxis: 1.0)
-
-            //TODO: Implement actual SA calculation
-            self.setSSurfaceArea(calcSA: 1.0)
-        }
-
-        ///init
-        ///  Initialization function for an ellipsoid
-        func init(firstAxis: Double, secondAxis: Double, thirdAxis: Double) {
-            self.setAxis(firstAxis: firstAxis, secondAxis: secondAxis, thirdAxis: thirdAxis)
-
-            self.setSSurfaceArea(calcSA: 1.0)
-        }
-
+        @Published var bbVolume: Double = 1.0
+        @Published var bbSurfaceArea: Double = 1.0
+        @Published var bbVolumeStr: String = ""
+        @Published var bbSurfaceAreaStr: String = ""
 
     //Setting Functions
         ///setAxis
@@ -138,7 +119,7 @@ class Ellipsoid: NSObject, ObservableObject {
             }
 
             self.bbVolume = calcbbVolume
-            self.bbVolumeStr = String(format: "%7.5f", self.volume)
+            self.bbVolumeStr = String(format: "%7.5f", self.bbVolume)
             return true
         }
 
@@ -168,7 +149,7 @@ class Ellipsoid: NSObject, ObservableObject {
             }
 
             self.bbSurfaceArea = calcbbSA
-            self.bbSurfaceAreaStr = String(format: "%7.5f", self.bbsurfaceArea)
+            self.bbSurfaceAreaStr = String(format: "%7.5f", self.bbSurfaceArea)
             return true
         }
 
@@ -213,6 +194,6 @@ class Ellipsoid: NSObject, ObservableObject {
         ///  Calculates the surface area of the bounding box
         func calculatebbSurfaceArea() {
             //SurfaceArea = 2 * (firstAxis * secondAxis) + 2 * (firstAxis * thirdAxis) + 2 * (secondAxis * thirdAxis)
-            self.setbbSurfaceArea(calcbbSA: 2 * (self.firstAxisLength * self.secondAxisLength + self.firstAxisLength * self.thirdAxisLength + self.secondAxisLength * self.thirdAxisLength))
+            self.setbbSurfaceArea(calcbbSA: 8 * (self.firstAxisLength * self.secondAxisLength + self.firstAxisLength * self.thirdAxisLength + self.secondAxisLength * self.thirdAxisLength))
         }
 }
