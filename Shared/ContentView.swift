@@ -67,7 +67,9 @@ struct ContentView: View {
                 .frame(width: 200)
                 .padding(.top, 0)
                 .padding(.bottom, 50)
+        }
 
+        VStack {
             //Calculate button area
             Button("Calculate", action: {updateCalculations()})
                 .padding(.bottom)
