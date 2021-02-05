@@ -9,9 +9,26 @@ import SwiftUI
 
 @main
 struct Main_Phys_440App: App {
+    
+    @StateObject var plotDataModel = PlotDataClass(fromLine: true)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .environmentObject(plotDataModel)
+                    .tabItem {
+                        Text("Plot")
+                    }
+                TextView()
+                    .environmentObject(plotDataModel)
+                    .tabItem {
+                        Text("Text")
+                    }
+                            
+                            
+            }
+            
         }
     }
 }
