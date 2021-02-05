@@ -39,6 +39,26 @@
 		A08ED22325CDF0AC00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22225CDF0AC00405126 /* CorePlot */; };
 		A08ED22525CDF0C500405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22425CDF0C500405126 /* CorePlot */; };
 		A08ED22725CDF0CD00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22625CDF0CD00405126 /* CorePlot */; };
+		A08ED22D25CE02B200405126 /* SubCanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED22C25CE02B200405126 /* SubCanView.swift */; };
+		A08ED22E25CE02B200405126 /* SubCanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED22C25CE02B200405126 /* SubCanView.swift */; };
+		A08ED22F25CE02B200405126 /* SubCanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED22C25CE02B200405126 /* SubCanView.swift */; };
+		A08ED23025CE02B200405126 /* SubCanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED22C25CE02B200405126 /* SubCanView.swift */; };
+		A08ED23625CE02C100405126 /* RecurRelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED23525CE02C100405126 /* RecurRelView.swift */; };
+		A08ED23725CE02C100405126 /* RecurRelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED23525CE02C100405126 /* RecurRelView.swift */; };
+		A08ED23825CE02C100405126 /* RecurRelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED23525CE02C100405126 /* RecurRelView.swift */; };
+		A08ED23925CE02C100405126 /* RecurRelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED23525CE02C100405126 /* RecurRelView.swift */; };
+		A08ED24C25CE038E00405126 /* ErrAssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED24B25CE038E00405126 /* ErrAssView.swift */; };
+		A08ED24D25CE038E00405126 /* ErrAssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED24B25CE038E00405126 /* ErrAssView.swift */; };
+		A08ED24E25CE038E00405126 /* ErrAssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED24B25CE038E00405126 /* ErrAssView.swift */; };
+		A08ED24F25CE038E00405126 /* ErrAssView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED24B25CE038E00405126 /* ErrAssView.swift */; };
+		A08ED25525CE03D800405126 /* SeriesCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED25425CE03D800405126 /* SeriesCalc.swift */; };
+		A08ED25625CE03D800405126 /* SeriesCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED25425CE03D800405126 /* SeriesCalc.swift */; };
+		A08ED25725CE03D800405126 /* SeriesCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED25425CE03D800405126 /* SeriesCalc.swift */; };
+		A08ED25825CE03D800405126 /* SeriesCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED25425CE03D800405126 /* SeriesCalc.swift */; };
+		A08ED26225CE0B2100405126 /* ErrorAssessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED26125CE0B2100405126 /* ErrorAssessor.swift */; };
+		A08ED26325CE0B2100405126 /* ErrorAssessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED26125CE0B2100405126 /* ErrorAssessor.swift */; };
+		A08ED26425CE0B2100405126 /* ErrorAssessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED26125CE0B2100405126 /* ErrorAssessor.swift */; };
+		A08ED26525CE0B2100405126 /* ErrorAssessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED26125CE0B2100405126 /* ErrorAssessor.swift */; };
 		A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3A425C33BD100107940 /* Tests_iOS.swift */; };
 		A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3AF25C33BD100107940 /* Tests_macOS.swift */; };
 		A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */; };
@@ -74,6 +94,11 @@
 		A08ED1DD25CDEF3E00405126 /* operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operators.swift; sourceTree = "<group>"; };
 		A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePlotData.swift; sourceTree = "<group>"; };
 		A08ED1DF25CDEF3E00405126 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		A08ED22C25CE02B200405126 /* SubCanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCanView.swift; sourceTree = "<group>"; };
+		A08ED23525CE02C100405126 /* RecurRelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecurRelView.swift; sourceTree = "<group>"; };
+		A08ED24B25CE038E00405126 /* ErrAssView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrAssView.swift; sourceTree = "<group>"; };
+		A08ED25425CE03D800405126 /* SeriesCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCalc.swift; sourceTree = "<group>"; };
+		A08ED26125CE0B2100405126 /* ErrorAssessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAssessor.swift; sourceTree = "<group>"; };
 		A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Phys_440App.swift; sourceTree = "<group>"; };
 		A0EFE38A25C33BCE00107940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0EFE38B25C33BD100107940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -159,6 +184,11 @@
 				A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */,
 				A08ED1DF25CDEF3E00405126 /* TextView.swift */,
 				A0EFE38B25C33BD100107940 /* Assets.xcassets */,
+				A08ED22C25CE02B200405126 /* SubCanView.swift */,
+				A08ED23525CE02C100405126 /* RecurRelView.swift */,
+				A08ED24B25CE038E00405126 /* ErrAssView.swift */,
+				A08ED25425CE03D800405126 /* SeriesCalc.swift */,
+				A08ED26125CE0B2100405126 /* ErrorAssessor.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -382,13 +412,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EFE3B425C33BD100107940 /* ContentView.swift in Sources */,
+				A08ED26225CE0B2100405126 /* ErrorAssessor.swift in Sources */,
+				A08ED23625CE02C100405126 /* RecurRelView.swift in Sources */,
 				A08ED1FA25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F625CDEF3E00405126 /* operators.swift in Sources */,
+				A08ED24C25CE038E00405126 /* ErrAssView.swift in Sources */,
 				A08ED1F225CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				A08ED25525CE03D800405126 /* SeriesCalc.swift in Sources */,
 				A08ED1EE25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E625CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 				A08ED1E225CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
+				A08ED22D25CE02B200405126 /* SubCanView.swift in Sources */,
 				A08ED1FE25CDEF3E00405126 /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,13 +433,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */,
+				A08ED26325CE0B2100405126 /* ErrorAssessor.swift in Sources */,
+				A08ED23725CE02C100405126 /* RecurRelView.swift in Sources */,
 				A08ED1FB25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F725CDEF3E00405126 /* operators.swift in Sources */,
+				A08ED24D25CE038E00405126 /* ErrAssView.swift in Sources */,
 				A08ED1F325CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				A08ED25625CE03D800405126 /* SeriesCalc.swift in Sources */,
 				A08ED1EF25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E725CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0EFE3B325C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 				A08ED1E325CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
+				A08ED22E25CE02B200405126 /* SubCanView.swift in Sources */,
 				A08ED1FF25CDEF3E00405126 /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,13 +454,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08ED1E825CDEF3E00405126 /* CorePlot.swift in Sources */,
+				A08ED25725CE03D800405126 /* SeriesCalc.swift in Sources */,
 				A08ED1FC25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A08ED24E25CE038E00405126 /* ErrAssView.swift in Sources */,
 				A08ED1F825CDEF3E00405126 /* operators.swift in Sources */,
 				A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */,
+				A08ED26425CE0B2100405126 /* ErrorAssessor.swift in Sources */,
 				A08ED1F025CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A08ED22F25CE02B200405126 /* SubCanView.swift in Sources */,
 				A08ED1F425CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A08ED20025CDEF3E00405126 /* TextView.swift in Sources */,
 				A08ED1E425CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
+				A08ED23825CE02C100405126 /* RecurRelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,13 +474,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08ED1E925CDEF3E00405126 /* CorePlot.swift in Sources */,
+				A08ED25825CE03D800405126 /* SeriesCalc.swift in Sources */,
 				A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A08ED24F25CE038E00405126 /* ErrAssView.swift in Sources */,
 				A08ED1F925CDEF3E00405126 /* operators.swift in Sources */,
 				A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */,
+				A08ED26525CE0B2100405126 /* ErrorAssessor.swift in Sources */,
 				A08ED1F125CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A08ED23025CE02B200405126 /* SubCanView.swift in Sources */,
 				A08ED1F525CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A08ED20125CDEF3E00405126 /* TextView.swift in Sources */,
 				A08ED1E525CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
+				A08ED23925CE02C100405126 /* RecurRelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
