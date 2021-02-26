@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import SwiftUI
+import CorePlot
+
+class ErrorAssessor: NSObject, ObservableObject {
+    @Published var plotData = [plotDataType]()
+    @Published var plotParameters: ChangingPlotParameters = ChangingPlotParameters()
+    @Published var calculatedText = ""
+
+    @Published var pointNumber = 0.0
+
+    
+}
