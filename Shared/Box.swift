@@ -8,16 +8,23 @@
 
 import Foundation
 
+//Possible Box Errors
+enum BoxErrors: Error {
+    
+}
+
 class Box {
     //Variables
-    private var corner1: Array<CGFloat> //Needs to have the same count as c2
-    private var corner2: Array<CGFloat>
+    private var cor1: Array<CGFloat> = [CGFloat]()//Needs to have the same count as c2
+    private var cor2: Array<CGFloat> = [CGFloat]()
     
     //Constructors
-    init() {
+    init(newCor1: Array<CGFloat>, newCor2: Array<CGFloat>) {
         //The designed constructor of this class
-        corner1 = Array()
-        corner2 = Array()
+        if (newCor1.count == newCor2.count) {
+            self.cor1 = newCor1
+            self.cor2 = newCor2
+        }
     }
     
     //Setters
