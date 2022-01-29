@@ -11,21 +11,29 @@ import SwiftUI
 struct Main_Phys_440App: App {
     
     @StateObject var plotDataModel = PlotDataClass(fromLine: true)
+    @StateObject var quadDataModel = PlotDataClass(fromLine: true)
     
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView()
-                    .environmentObject(plotDataModel)
+                QuadView()
+                    .environmentObject(quadDataModel)
                     .tabItem {
-                        Text("Plot")
+                        Text("Quad Root Error Analysis")
                     }
-                TextView()
-                    .environmentObject(plotDataModel)
-                    .tabItem {
-                        Text("Text")
-                    }
-                            
+                    
+                
+//                ContentView()
+//                    .environmentObject(plotDataModel)
+//                    .tabItem {
+//                        Text("Plot")
+//                    }
+//                TextView()
+//                    .environmentObject(plotDataModel)
+//                    .tabItem {
+//                        Text("Text")
+//                    }
+//
                             
             }
             
