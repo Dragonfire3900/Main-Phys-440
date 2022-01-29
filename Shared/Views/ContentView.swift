@@ -34,7 +34,7 @@ struct ContentView: View {
             HStack{
                 
                 HStack(alignment: .center) {
-                    Text("temp:")
+                    Text("Adjustable Parameter")
                         .font(.callout)
                         .bold()
                     TextField("temp", text: $tempInput)
@@ -73,7 +73,7 @@ struct ContentView: View {
         calculator.plotDataModel = self.plotDataModel
         
         //Calculate the new plotting data and place in the plotDataModel
-        calculator.plotYEqualsX()
+        calculator.ploteToTheMinusX()
         
         
     }
