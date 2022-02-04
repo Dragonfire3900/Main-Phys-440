@@ -15,18 +15,15 @@ struct Main_Phys_440App: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContentView()
-                    .environmentObject(plotDataModel)
+                ExponentialView()
                     .tabItem {
-                        Text("Plot")
+                        Text("Exponential")
                     }
-                TextView()
-                    .environmentObject(plotDataModel)
+                
+                AbsorptionView()
                     .tabItem {
-                        Text("Text")
+                        Text("Absorption")
                     }
-                            
-                            
             }
             
         }
