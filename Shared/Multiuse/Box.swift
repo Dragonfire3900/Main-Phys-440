@@ -27,7 +27,7 @@ class Box {
     }
     
     public func isInside(testpt: Point) -> Bool {
-        for i in 0...self.dims.count {
+        for i in 0...min(self.dims.count, testpt.count) {
             if (self.center[i] + self.dims[i] <= testpt[i] || self.center[i] - self.dims[i] >= testpt[i]) {
                 return false
             }

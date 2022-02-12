@@ -6,78 +6,113 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum PointError: Error {
     case OutOfBounds(i: Int)
 }
 
-class Point {
-    private var pos: (x: Double, y: Double, z: Double)
+class Point: Identifiable, Hashable, ObservableObject {
+    internal var dims: [Double]
+    
+    public var count: Int {
+        get {
+            return self.dims.count
+        }
+    }
     
     public var x: Double {
         get {
-            return self.pos.x
+            return self.dims[0]
         }
     }
     
     public var y: Double {
         get {
-            return self.pos.y
+            return self.dims[1]
         }
     }
     
     public var z: Double {
         get {
-            return self.pos.z
-        }
-    }
-    
-    subscript(index: Int) -> Double {
-        get {
-            switch index {
-            case 0:
-                return self.pos.x
-            case 1:
-                return self.pos.y
-            case 2:
-                return self.pos.z
-            default:
-                throw PointError.OutOfBounds(i: index)
-            }
+            return self.dims[2]
         }
     }
     
     init() {
-        self.pos = (0.0, 0.0, 0.0)
+        self.dims = []
+    }
+    
+    init(x: Double) {
+        self.dims = [x]
+    }
+    
+    init(x: Double, y: Double) {
+        self.dims = [x, y]
     }
     
     init(x: Double, y: Double, z: Double) {
-        self.pos = (x, y, z)
+        self.dims = [x, y, z]
     }
     
-    /**
-     Moves a coordinate point without taking the initial position into account
-     */
-    public func absMove(x: Double, y: Double, z: Double) {
-        self.pos = (x, y, z)
+    init(dimArr: [Double]) {
+        self.dims = dimArr
     }
     
-    /**
-    Moves a coordinate point relative to the initial point
-     */
-    public func move(x: Double, y: Double, z: Double) {
-        self.pos = (self.pos.x + x, self.pos.y + y, self.pos.z + z)
+    subscript(index: Int) -> Double {
+        get {
+            return self.dims[index]
+        }
+        
+        set(newValue) {
+            self.dims[index] = newValue
+        }
     }
     
-    public func getXY() -> CGPoint {
-        return CGPoint(x: self.pos.x, y: self.pos.y)
+    static func == (lhs: Point, rhs: Point) -> Bool {
+        if (lhs.count != rhs.count) {
+            return false
+        }
+        
+        for index in 0...lhs.count {
+            if (lhs[index] != rhs[index]) { return false }
+        }
+        
+        return true
     }
     
-    public func getYZ() -> CGPoint {
-        return CGPoint(x: self.pos.y, y: self.pos.z)
+    func hash(into hasher: inout Hasher) {
+        for index in 0...self.count {
+            hasher.combine(self.dims[index])
+        }
+    }
+}
+
+class ColorPoint: Point {
+    public var col: Color
+    
+    override init() {
+        self.col = Color.white
+        super.init()
     }
     
-    public func getXZ() -> CGPoint {
-        return CGPoint(x: self.pos.x, y: self.pos.z)
+    init(x: Double, col: Color) {
+        self.col = col
+        super.init(x: x)
+    }
+    
+    init(x: Double, y: Double, col: Color) {
+        self.col = col
+        super.init(x: x, y: y)
+    }
+    
+    init(x: Double, y: Double, z: Double, col: Color) {
+        self.col = col
+        super.init(x: x, y: y, z: z)
+    }
+    
+    init(dimArr: [Double], col: Color) {
+        self.col = col
+        super.init(dimArr: dimArr)
     }
 }
