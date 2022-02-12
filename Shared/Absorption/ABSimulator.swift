@@ -11,11 +11,13 @@ class ABSimulator {
     public var partNum: Int
     private var boundBox: Box
     
-    init(particleNum: Int) {
+    init(particleNum: Int, boundB: Box) {
         if (particleNum > 0) {
             self.partNum = particleNum
         } else {
             self.partNum = 1
         }
+        
+        self.boundBox = boundB
     }
 }

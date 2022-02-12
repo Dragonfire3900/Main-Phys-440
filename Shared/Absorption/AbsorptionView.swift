@@ -12,14 +12,15 @@ import SwiftUI
 struct AbsorptionView: View {
     var body: some View {
         //Simulation configuration pieces
-        HStack {
-            Text("Number of Particles")
+        VStack {
+            HStack {
+                Text("Number of Particles")
+            }
+            
+            //Simulation window
+            SimView()
+                .frame(width: 300, height: 300)
         }
-        
-        
-        //Simulation window
-        SimView()
-            .frame(width: 300, height: 300)
     }
 }
 
