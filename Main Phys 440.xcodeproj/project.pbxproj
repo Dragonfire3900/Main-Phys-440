@@ -39,6 +39,10 @@
 		A08ED22325CDF0AC00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22225CDF0AC00405126 /* CorePlot */; };
 		A08ED22525CDF0C500405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22425CDF0C500405126 /* CorePlot */; };
 		A08ED22725CDF0CD00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22625CDF0CD00405126 /* CorePlot */; };
+		A0AD495527B70AD90070DC4D /* ExpSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD495427B70AD90070DC4D /* ExpSimView.swift */; };
+		A0AD495627B70AD90070DC4D /* ExpSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD495427B70AD90070DC4D /* ExpSimView.swift */; };
+		A0AD495727B70AD90070DC4D /* ExpSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD495427B70AD90070DC4D /* ExpSimView.swift */; };
+		A0AD495827B70AD90070DC4D /* ExpSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD495427B70AD90070DC4D /* ExpSimView.swift */; };
 		A0B848E827ADD0CF005DC808 /* AbsorptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */; };
 		A0B848E927ADD0CF005DC808 /* AbsorptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */; };
 		A0B848EA27ADD0CF005DC808 /* AbsorptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */; };
@@ -47,18 +51,14 @@
 		A0B848EE27ADD3D8005DC808 /* ExponentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */; };
 		A0B848EF27ADD3D8005DC808 /* ExponentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */; };
 		A0B848F027ADD3D8005DC808 /* ExponentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */; };
-		A0B848F227ADD63D005DC808 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* SimView.swift */; };
-		A0B848F327ADD63D005DC808 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* SimView.swift */; };
-		A0B848F427ADD63D005DC808 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* SimView.swift */; };
-		A0B848F527ADD63D005DC808 /* SimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* SimView.swift */; };
+		A0B848F227ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
+		A0B848F327ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
+		A0B848F427ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
+		A0B848F527ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
 		A0B848F727ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
 		A0B848F827ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
 		A0B848F927ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
 		A0B848FA27ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
-		A0B8490127ADDCC8005DC808 /* RNGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490027ADDCC8005DC808 /* RNGen.swift */; };
-		A0B8490227ADDCC8005DC808 /* RNGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490027ADDCC8005DC808 /* RNGen.swift */; };
-		A0B8490327ADDCC8005DC808 /* RNGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490027ADDCC8005DC808 /* RNGen.swift */; };
-		A0B8490427ADDCC8005DC808 /* RNGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490027ADDCC8005DC808 /* RNGen.swift */; };
 		A0B8490627ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
 		A0B8490727ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
 		A0B8490827ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
@@ -67,10 +67,11 @@
 		A0B8490C27ADE88B005DC808 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490A27ADE88B005DC808 /* Box.swift */; };
 		A0B8490D27ADE88B005DC808 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490A27ADE88B005DC808 /* Box.swift */; };
 		A0B8490E27ADE88B005DC808 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490A27ADE88B005DC808 /* Box.swift */; };
-		A0EB628025E06F3B003AFF42 /* IntegMeths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */; };
-		A0EB628125E06F3B003AFF42 /* IntegMeths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */; };
-		A0EB628225E06F3B003AFF42 /* IntegMeths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */; };
-		A0EB628325E06F3B003AFF42 /* IntegMeths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */; };
+		A0CCD8B927BF07BD001AE892 /* OverlapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8B827BF07BD001AE892 /* OverlapView.swift */; };
+		A0CCD8BC27BF0830001AE892 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8BB27BF0830001AE892 /* SnowView.swift */; };
+		A0CCD8BD27BF0830001AE892 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8BB27BF0830001AE892 /* SnowView.swift */; };
+		A0CCD8BE27BF0830001AE892 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8BB27BF0830001AE892 /* SnowView.swift */; };
+		A0CCD8BF27BF0830001AE892 /* SnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8BB27BF0830001AE892 /* SnowView.swift */; };
 		A0EB628925E078EE003AFF42 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB628825E078EE003AFF42 /* Particle.swift */; };
 		A0EB628A25E078EE003AFF42 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB628825E078EE003AFF42 /* Particle.swift */; };
 		A0EB628B25E078EE003AFF42 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EB628825E078EE003AFF42 /* Particle.swift */; };
@@ -110,14 +111,15 @@
 		A08ED1DD25CDEF3E00405126 /* operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operators.swift; sourceTree = "<group>"; };
 		A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePlotData.swift; sourceTree = "<group>"; };
 		A08ED1DF25CDEF3E00405126 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		A0AD495427B70AD90070DC4D /* ExpSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpSimView.swift; sourceTree = "<group>"; };
 		A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsorptionView.swift; sourceTree = "<group>"; };
 		A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialView.swift; sourceTree = "<group>"; };
-		A0B848F127ADD63D005DC808 /* SimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimView.swift; sourceTree = "<group>"; };
+		A0B848F127ADD63D005DC808 /* AbsSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsSimView.swift; sourceTree = "<group>"; };
 		A0B848F627ADD6F9005DC808 /* ABSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSimulator.swift; sourceTree = "<group>"; };
-		A0B8490027ADDCC8005DC808 /* RNGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNGen.swift; sourceTree = "<group>"; };
 		A0B8490527ADE2BF005DC808 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		A0B8490A27ADE88B005DC808 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegMeths.swift; sourceTree = "<group>"; };
+		A0CCD8B827BF07BD001AE892 /* OverlapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapView.swift; sourceTree = "<group>"; };
+		A0CCD8BB27BF0830001AE892 /* SnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowView.swift; sourceTree = "<group>"; };
 		A0EB628825E078EE003AFF42 /* Particle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Particle.swift; sourceTree = "<group>"; };
 		A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Phys_440App.swift; sourceTree = "<group>"; };
 		A0EFE38A25C33BCE00107940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */,
+				A0AD495427B70AD90070DC4D /* ExpSimView.swift */,
 			);
 			path = Exponent;
 			sourceTree = "<group>";
@@ -191,9 +194,8 @@
 			children = (
 				A0EB628825E078EE003AFF42 /* Particle.swift */,
 				A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */,
-				A0B848F127ADD63D005DC808 /* SimView.swift */,
+				A0B848F127ADD63D005DC808 /* AbsSimView.swift */,
 				A0B848F627ADD6F9005DC808 /* ABSimulator.swift */,
-				A0B8490027ADDCC8005DC808 /* RNGen.swift */,
 			);
 			path = Absorption;
 			sourceTree = "<group>";
@@ -201,7 +203,7 @@
 		A0B848E627ADD027005DC808 /* Overlap */ = {
 			isa = PBXGroup;
 			children = (
-				A0EB627F25E06F3B003AFF42 /* IntegMeths.swift */,
+				A0CCD8B827BF07BD001AE892 /* OverlapView.swift */,
 			);
 			path = Overlap;
 			sourceTree = "<group>";
@@ -213,6 +215,14 @@
 				A0B8490527ADE2BF005DC808 /* Point.swift */,
 			);
 			path = Multiuse;
+			sourceTree = "<group>";
+		};
+		A0CCD8BA27BF080F001AE892 /* Snowflake */ = {
+			isa = PBXGroup;
+			children = (
+				A0CCD8BB27BF0830001AE892 /* SnowView.swift */,
+			);
+			path = Snowflake;
 			sourceTree = "<group>";
 		};
 		A0EFE38325C33BCE00107940 = {
@@ -231,6 +241,7 @@
 		A0EFE38825C33BCE00107940 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A0CCD8BA27BF080F001AE892 /* Snowflake */,
 				A0B8490F27ADE8B3005DC808 /* Multiuse */,
 				A0B848E627ADD027005DC808 /* Overlap */,
 				A0B848E527ADD00E005DC808 /* Absorption */,
@@ -467,11 +478,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B8490127ADDCC8005DC808 /* RNGen.swift in Sources */,
 				A0EB628925E078EE003AFF42 /* Particle.swift in Sources */,
 				A0EFE3B425C33BD100107940 /* ContentView.swift in Sources */,
 				A08ED1FA25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0CCD8B927BF07BD001AE892 /* OverlapView.swift in Sources */,
+				A0AD495527B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F625CDEF3E00405126 /* operators.swift in Sources */,
+				A0CCD8BC27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F225CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848ED27ADD3D8005DC808 /* ExponentialView.swift in Sources */,
 				A08ED1EE25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
@@ -482,8 +495,7 @@
 				A08ED1E225CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
 				A08ED1FE25CDEF3E00405126 /* TextView.swift in Sources */,
 				A0B8490627ADE2BF005DC808 /* Point.swift in Sources */,
-				A0B848F227ADD63D005DC808 /* SimView.swift in Sources */,
-				A0EB628025E06F3B003AFF42 /* IntegMeths.swift in Sources */,
+				A0B848F227ADD63D005DC808 /* AbsSimView.swift in Sources */,
 				A0B848E827ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,13 +504,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B8490227ADDCC8005DC808 /* RNGen.swift in Sources */,
 				A0EB628A25E078EE003AFF42 /* Particle.swift in Sources */,
 				A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */,
 				A08ED1FB25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0AD495627B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F725CDEF3E00405126 /* operators.swift in Sources */,
 				A08ED1F325CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848EE27ADD3D8005DC808 /* ExponentialView.swift in Sources */,
+				A0CCD8BD27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1EF25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E725CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0B8490C27ADE88B005DC808 /* Box.swift in Sources */,
@@ -507,8 +520,7 @@
 				A08ED1E325CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
 				A08ED1FF25CDEF3E00405126 /* TextView.swift in Sources */,
 				A0B8490727ADE2BF005DC808 /* Point.swift in Sources */,
-				A0B848F327ADD63D005DC808 /* SimView.swift in Sources */,
-				A0EB628125E06F3B003AFF42 /* IntegMeths.swift in Sources */,
+				A0B848F327ADD63D005DC808 /* AbsSimView.swift in Sources */,
 				A0B848E927ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,20 +531,20 @@
 			files = (
 				A0B8490827ADE2BF005DC808 /* Point.swift in Sources */,
 				A0B848EF27ADD3D8005DC808 /* ExponentialView.swift in Sources */,
-				A0B848F427ADD63D005DC808 /* SimView.swift in Sources */,
+				A0B848F427ADD63D005DC808 /* AbsSimView.swift in Sources */,
 				A0EB628B25E078EE003AFF42 /* Particle.swift in Sources */,
 				A08ED1E825CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FC25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0AD495727B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F825CDEF3E00405126 /* operators.swift in Sources */,
-				A0B8490327ADDCC8005DC808 /* RNGen.swift in Sources */,
 				A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */,
 				A08ED1F025CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A0CCD8BE27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F425CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848EA27ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 				A08ED20025CDEF3E00405126 /* TextView.swift in Sources */,
 				A0B8490D27ADE88B005DC808 /* Box.swift in Sources */,
 				A08ED1E425CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
-				A0EB628225E06F3B003AFF42 /* IntegMeths.swift in Sources */,
 				A0B848F927ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,20 +555,20 @@
 			files = (
 				A0B8490927ADE2BF005DC808 /* Point.swift in Sources */,
 				A0B848F027ADD3D8005DC808 /* ExponentialView.swift in Sources */,
-				A0B848F527ADD63D005DC808 /* SimView.swift in Sources */,
+				A0B848F527ADD63D005DC808 /* AbsSimView.swift in Sources */,
 				A0EB628C25E078EE003AFF42 /* Particle.swift in Sources */,
 				A08ED1E925CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0AD495827B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F925CDEF3E00405126 /* operators.swift in Sources */,
-				A0B8490427ADDCC8005DC808 /* RNGen.swift in Sources */,
 				A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */,
 				A08ED1F125CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A0CCD8BF27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F525CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848EB27ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 				A08ED20125CDEF3E00405126 /* TextView.swift in Sources */,
 				A0B8490E27ADE88B005DC808 /* Box.swift in Sources */,
 				A08ED1E525CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
-				A0EB628325E06F3B003AFF42 /* IntegMeths.swift in Sources */,
 				A0B848FA27ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
