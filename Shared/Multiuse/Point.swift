@@ -10,6 +10,7 @@ import SwiftUI
 
 enum PointError: Error {
     case OutOfBounds(i: Int)
+    case IncorrectDimensions(expected: Int, got: Int)
 }
 
 class Point: Identifiable, Hashable, ObservableObject {
@@ -59,6 +60,10 @@ class Point: Identifiable, Hashable, ObservableObject {
         self.dims = dimArr
     }
     
+    init(pt: Point) {
+        self.dims = pt.dims
+    }
+    
     subscript(index: Int) -> Double {
         get {
             return self.dims[index]
@@ -85,6 +90,32 @@ class Point: Identifiable, Hashable, ObservableObject {
         for index in 0...self.count {
             hasher.combine(self.dims[index])
         }
+    }
+    
+    func move(nPt: [Double]) throws {
+        if (self.count != nPt.count) {
+            throw PointError.IncorrectDimensions(expected: self.count, got: nPt.count)
+        }
+        
+        for i in 0...self.count {
+            self.dims[i] += nPt[i]
+        }
+    }
+    
+    func move(index: Int, nPt: Double) {
+        self.dims[index] += nPt
+    }
+    
+    func absMove(nPt: [Double]) throws {
+        if (self.count != nPt.count) {
+            throw PointError.IncorrectDimensions(expected: self.count, got: nPt.count)
+        }
+        
+        self.dims = nPt
+    }
+    
+    func absMove(index: Int, nPt: Double) {
+        self.dims[index] = nPt
     }
 }
 
@@ -114,5 +145,10 @@ class ColorPoint: Point {
     init(dimArr: [Double], col: Color) {
         self.col = col
         super.init(dimArr: dimArr)
+    }
+    
+    init(oPt: Point, col: Color) {
+        self.col = col
+        super.init(pt: oPt)
     }
 }
