@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct SimView: View {
+struct AbsSimView: View {
+    let pointArr: [ColorPoint]
+//    let lineArr:
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Rectangle() //Background
+            .fill(Color.white)
     }
 }
 
-struct SimView_Previews: PreviewProvider {
+struct AbsSimView_Previews: PreviewProvider {
     static var previews: some View {
-        SimView()
+        AbsSimView(pointArr: [])
     }
 }
