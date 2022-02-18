@@ -19,6 +19,7 @@ struct ExponentialView: View {
         VStack {
             Text("I do the exponentials")
             
+            
             ExpSimView(pointArr: pointArr)
                 .frame(width: dispBox.getLength(dimNum: 0), height: dispBox.getLength(dimNum: 1))
                 .offset(x: dispBox.getCenter(dimNum: 0), y: dispBox.getCenter(dimNum: 1))

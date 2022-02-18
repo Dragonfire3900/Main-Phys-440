@@ -24,6 +24,10 @@ struct Main_Phys_440App: App {
                     .tabItem {
                         Text("Absorption")
                     }
+                SnowView()
+                    .tabItem {
+                        Text("Snowflake")
+                    }
             }
             
         }
