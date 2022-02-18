@@ -107,7 +107,7 @@ class Box {
         if inPlace {
             for i in 0..<self.count {
                 pt.absMove(index: i,
-                           nPt: self.getLength(dimNum: i) / bBox.getLength(dimNum: i) * ((pt[i] - bBox.getCenter(dimNum: i))) + self.getCenter(dimNum: i))
+                           nPt: self.getLength(dimNum: i) / bBox.getLength(dimNum: i) * (pt[i] - bBox.getCenter(dimNum: i)) + self.getCenter(dimNum: i))
             }
             return pt
         } else {
@@ -115,7 +115,7 @@ class Box {
             
             for i in 0..<self.count {
                 mv.append(
-                    self.getLength(dimNum: i) / bBox.getLength(dimNum: i) * ((pt[i] - bBox.getCenter(dimNum: i))) + self.getCenter(dimNum: i)
+                    self.getLength(dimNum: i) / bBox.getLength(dimNum: i) * (pt[i] - bBox.getCenter(dimNum: i)) + self.getCenter(dimNum: i)
                 )
             }
             
