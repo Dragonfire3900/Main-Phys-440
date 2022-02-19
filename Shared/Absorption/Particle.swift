@@ -10,7 +10,7 @@ import Foundation
 /**
  Describes a single particle
  */
-class Particle: Point {
+class Particle: ColorPoint {
     private var energy: Double = 100
     private var mass: Double = 1.0
     
