@@ -9,9 +9,6 @@ import SwiftUI
 
 @main
 struct Main_Phys_440App: App {
-    
-    @StateObject var plotDataModel = PlotDataClass(fromLine: true)
-    
     var body: some Scene {
         WindowGroup {
             TabView {

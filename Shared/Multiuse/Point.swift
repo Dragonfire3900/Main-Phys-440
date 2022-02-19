@@ -13,8 +13,16 @@ enum PointError: Error {
     case IncorrectDimensions(expected: Int, got: Int)
 }
 
-class Point: Identifiable, Hashable, ObservableObject {
+class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
     internal var dims: [Double]
+    
+    public var description: String {
+        get {
+            return dims.reduce("(", { jStr, dim in
+                jStr + "\(dim), "
+            }).dropLast(2) + ")"
+        }
+    }
     
     public var count: Int {
         get {

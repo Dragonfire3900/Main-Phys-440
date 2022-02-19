@@ -17,7 +17,7 @@ struct Line: Identifiable {
     let id = UUID()
     
     func getBetween(perc: Double) -> ColorPoint{
-        let dims: [Double] = (0..<min(p1.count, p2.count)).map { perc * p1[$0] + (1 - perc) * p2[$0]} //Doing a weighted average between the two points
+        let dims: [Double] = (0..<min(p1.count, p2.count)).map { (1 - perc) * p1[$0] + perc * p2[$0]} //Doing a weighted average between the two points
         return ColorPoint(dimArr: dims, col: self.col)
     }
     
@@ -29,18 +29,24 @@ struct Line: Identifiable {
     ///   - above: If the point should be above or below the line
     /// - Returns: A point with the desired coordinates
     func getPara(perc: Double, dist: Double, above: Bool) -> ColorPoint {
-        let diff: [Double] = (0..<min(p1.count, p2.count)).map { p2[$0] - p1[$0] } //Getting the normal
-        let mag: Double = sqrt(diff.reduce(0, { x, y in
+        let diff: [Double] = (0..<min(p1.count, p2.count)).map { p1[$0] - p2[$0] } //Getting the normal
+        let mag: Double = sqrt(diff.reduce(0.0, { x, y in
             x + pow(y, 2)
         })) //Getting the magnitude of that normal
         
         let pt = self.getBetween(perc: perc)
         
+        let fromln = (0..<pt.count).map { dist * diff[($0 + 1) % pt.count] / mag }
+        
         if above {
-            let dims: [Double] = (0..<pt.count).map { pt[$0] + dist * diff[$0] / mag }
+            let dims: [Double] = (0..<pt.count).map {
+                pt[$0] + pow(-1.0, Double($0)) * fromln[$0]
+            }
             return ColorPoint(dimArr: dims, col: self.col)
         } else {
-            let dims: [Double] = (0..<pt.count).map { pt[$0] - dist * diff[$0] / mag }
+            let dims: [Double] = (0..<pt.count).map {
+                pt[$0] + pow(-1.0, Double($0 + 1)) * fromln[$0]
+            }
             return ColorPoint(dimArr: dims, col: self.col)
         }
     }
