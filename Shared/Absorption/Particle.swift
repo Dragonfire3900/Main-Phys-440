@@ -11,12 +11,12 @@ import Foundation
  Describes a single particle
  */
 class Particle: ColorPoint {
-    private var energy: Double = 100
+    private var energy: Double = 100.0
     private var mass: Double = 1.0
     
     public var is_moving: Bool {
         get {
-            if (energy >= 0.0) {
+            if (energy > 0.0) {
                 return true
             } else {
                 return false
