@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AbsSimView: View {
-    let pointArr: [ColorPoint]
+    var pointArr: [Particle]
     let detectBox: Box
     
     var body: some View {
@@ -22,12 +22,21 @@ struct AbsSimView: View {
                 .frame(width: detectBox.getLength(dimNum: 0), height: detectBox.getLength(dimNum: 1))
             
             ForEach(pointArr) { point in
-                Circle()
-                    .fill(point.col)
-                    .offset(x: point.x, y: point.y)
-                    .frame(width: 4.0, height: 4.0)
+                partView(part: point)
             }
         }
+    }
+}
+
+struct partView: View {
+    @ObservedObject var part: Particle
+    let radius: Double = 4.0
+    
+    var body: some View {
+        Circle()
+            .fill(part.col)
+            .offset(x: part.x, y: part.y)
+            .frame(width: radius, height: radius)
     }
 }
 
