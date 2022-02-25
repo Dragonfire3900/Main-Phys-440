@@ -87,7 +87,7 @@ class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
             return false
         }
         
-        for index in 0...lhs.count {
+        for index in 0..<lhs.count {
             if (lhs[index] != rhs[index]) { return false }
         }
         
@@ -95,7 +95,7 @@ class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
     }
     
     func hash(into hasher: inout Hasher) {
-        for index in 0...self.count {
+        for index in 0..<self.count {
             hasher.combine(self.dims[index])
         }
     }
@@ -105,7 +105,7 @@ class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
             throw PointError.IncorrectDimensions(expected: self.count, got: nPt.count)
         }
         
-        for i in 0...self.count {
+        for i in 0..<self.count {
             self.dims[i] += nPt[i]
         }
     }
