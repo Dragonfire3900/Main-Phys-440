@@ -53,6 +53,20 @@ class Box {
         return self.center[dimNum]
     }
     
+    /// Gets the left side of the nth dimension of the box
+    /// - Parameter dimNum: The dimension number
+    /// - Returns: Where the left side of the box is in dimension n
+    public func getLeftSide(dimNum: Int) -> Double {
+        return self.center[dimNum] - self.dims[dimNum]
+    }
+    
+    /// Gets the right side of the nth dimension of the box
+    /// - Parameter dimNum: The dimension number
+    /// - Returns: Where the right side of the box is in dimension n
+    public func getRightSide(dimNum: Int) -> Double {
+        return self.center[dimNum] + self.dims[dimNum]
+    }
+    
     /// A function returning if the given point is inside the box
     /// - Parameter testpt: The point to test if it's inside the box
     /// - Returns: A boolean telling if the point is inside the box
