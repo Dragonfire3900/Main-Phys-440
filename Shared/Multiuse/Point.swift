@@ -14,7 +14,7 @@ enum PointError: Error {
 }
 
 class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
-    @Published internal var dims: [Double]
+    @Published var dims: [Double]
     
     public var description: String {
         get {
