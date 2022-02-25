@@ -92,6 +92,14 @@ class Box {
         return Point(dimArr: rndPt)
     }
     
+    /// Creates a single random point within the length of the box but does not account for the offset of the center of the box
+    /// - Returns: A point within the length of the box but not shifted to be inside the box itself
+    public func getCentralPoint() -> Point {
+        let rndPt = (0..<self.dims.count).map({ Double.random(in: 0...self.dims[$0])})
+        
+        return Point(dimArr: rndPt)
+    }
+    
     public func getArea() -> Double {
         var a = 1.0
         for i in 0..<self.count {
