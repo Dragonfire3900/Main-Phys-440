@@ -110,6 +110,12 @@ class Point: Identifiable, Hashable, ObservableObject, CustomStringConvertible {
         }
     }
     
+    func move(pt: Point) {
+        for i in 0..<min(self.count, pt.count) {
+            self.dims[i] += pt.dims[i]
+        }
+    }
+    
     func move(index: Int, nPt: Double) {
         self.dims[index] += nPt
     }
