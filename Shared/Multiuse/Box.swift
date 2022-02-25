@@ -9,8 +9,8 @@ import Foundation
 
 /// A general box class which represents an n-dimensional box
 class Box {
-    private var dims: [Double]
-    private var center: [Double]
+    var dims: [Double]
+    var center: [Double]
     
     public var count: Int {
         get {
@@ -142,6 +142,40 @@ class Box {
             }
             
             return Point(dimArr: mv)
+        }
+    }
+    
+    /// Squishes a box into relative coordinates to each other. Effectively scales the two boxes to make it easier to display
+    /// - Parameters:
+    ///   - oBox: The other box to squish into this one
+    ///   - scaleBox: The box which is used as a scale
+    ///   - inPlace: If the other box should be modified or if a new box should be found
+    /// - Returns: Returns a box which is the squished version
+    public func squishBox(oBox: Box, scaleBox: Box, inPlace: Bool) -> Box {
+        if (self.count != oBox.count && self.count != scaleBox.count) {
+            print("The boxes your trying to squish are in different dimensions")
+            return oBox
+        }
+        
+        let scales = (0..<self.count).map({ self.dims[$0] / scaleBox.dims[$0] })
+        
+        if (inPlace) {
+            for i in 0..<self.count {
+                oBox.dims[i] = oBox.dims[i] * scales[i]
+                oBox.center[i] = self.center[i] + scales[i] * (oBox.center[i] - scaleBox.center[i])
+            }
+            
+            return oBox
+        } else {
+            let dims = (0..<self.count).map({
+                scales[$0] * oBox.dims[$0]
+            })
+            
+            let cen = (0..<self.count).map({
+                self.center[$0] + scales[$0] * (oBox.center[$0] - scaleBox.center[$0])
+            })
+
+            return Box(newDims: dims, newCen: cen)
         }
     }
     
