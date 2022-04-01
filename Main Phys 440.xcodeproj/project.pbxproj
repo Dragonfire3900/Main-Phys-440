@@ -47,6 +47,10 @@
 		A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE38A25C33BCE00107940 /* ContentView.swift */; };
 		A0EFE3B625C33BD100107940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EFE38B25C33BD100107940 /* Assets.xcassets */; };
 		A0EFE3B725C33BD100107940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EFE38B25C33BD100107940 /* Assets.xcassets */; };
+		A0FD4CFA27F7978200A1736A /* Differential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD4CF927F7978200A1736A /* Differential.swift */; };
+		A0FD4CFB27F7978200A1736A /* Differential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD4CF927F7978200A1736A /* Differential.swift */; };
+		A0FD4CFC27F7978200A1736A /* Differential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD4CF927F7978200A1736A /* Differential.swift */; };
+		A0FD4CFD27F7978200A1736A /* Differential.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FD4CF927F7978200A1736A /* Differential.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,7 @@
 		A0EFE3AB25C33BD100107940 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EFE3AF25C33BD100107940 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A0EFE3B125C33BD100107940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0FD4CF927F7978200A1736A /* Differential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Differential.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,9 @@
 		A0EFE38325C33BCE00107940 = {
 			isa = PBXGroup;
 			children = (
+				A0FD4CF827F78D9100A1736A /* Calculators */,
+				A0FD4CF727F78D7500A1736A /* PlottingUtil */,
+				A0FD4CF627F78C8700A1736A /* Views */,
 				A0EFE38825C33BCE00107940 /* Shared */,
 				A0EFE39225C33BD100107940 /* iOS */,
 				A0EFE39925C33BD100107940 /* macOS */,
@@ -150,13 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */,
-				A0EFE38A25C33BCE00107940 /* ContentView.swift */,
-				A08ED1D825CDEF3E00405126 /* ChangingPlotParameters.swift */,
 				A08ED1D925CDEF3E00405126 /* CorePlot.swift */,
-				A08ED1DB25CDEF3E00405126 /* PlotDataClass.swift */,
 				A08ED1DC25CDEF3E00405126 /* TextExportDocument.swift */,
 				A08ED1DD25CDEF3E00405126 /* operators.swift */,
-				A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */,
 				A08ED1DF25CDEF3E00405126 /* TextView.swift */,
 				A0EFE38B25C33BD100107940 /* Assets.xcassets */,
 			);
@@ -207,6 +211,32 @@
 				A0EFE3B125C33BD100107940 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		A0FD4CF627F78C8700A1736A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0EFE38A25C33BCE00107940 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0FD4CF727F78D7500A1736A /* PlottingUtil */ = {
+			isa = PBXGroup;
+			children = (
+				A08ED1DB25CDEF3E00405126 /* PlotDataClass.swift */,
+				A08ED1D825CDEF3E00405126 /* ChangingPlotParameters.swift */,
+				A0FD4CF927F7978200A1736A /* Differential.swift */,
+			);
+			path = PlottingUtil;
+			sourceTree = "<group>";
+		};
+		A0FD4CF827F78D9100A1736A /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */,
+			);
+			path = Calculators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +415,7 @@
 				A08ED1FA25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F625CDEF3E00405126 /* operators.swift in Sources */,
 				A08ED1F225CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				A0FD4CFA27F7978200A1736A /* Differential.swift in Sources */,
 				A08ED1EE25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E625CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */,
@@ -401,6 +432,7 @@
 				A08ED1FB25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F725CDEF3E00405126 /* operators.swift in Sources */,
 				A08ED1F325CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				A0FD4CFB27F7978200A1736A /* Differential.swift in Sources */,
 				A08ED1EF25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E725CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0EFE3B325C33BD100107940 /* Main_Phys_440App.swift in Sources */,
@@ -416,6 +448,7 @@
 				A08ED1E825CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FC25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F825CDEF3E00405126 /* operators.swift in Sources */,
+				A0FD4CFC27F7978200A1736A /* Differential.swift in Sources */,
 				A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */,
 				A08ED1F025CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1F425CDEF3E00405126 /* TextExportDocument.swift in Sources */,
@@ -431,6 +464,7 @@
 				A08ED1E925CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F925CDEF3E00405126 /* operators.swift in Sources */,
+				A0FD4CFD27F7978200A1736A /* Differential.swift in Sources */,
 				A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */,
 				A08ED1F125CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1F525CDEF3E00405126 /* TextExportDocument.swift in Sources */,
