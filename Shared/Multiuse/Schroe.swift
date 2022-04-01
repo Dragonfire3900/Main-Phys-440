@@ -20,3 +20,52 @@ import Foundation
 // 3) Evaluate the actual function over that defined interval
 //   a) Interpolate between the points if needed
 
+class SchroeDeriv: RestrictProject, MathRecursive {
+    //Static constants
+    internal static let DEF_PT: Double = 0.0
+    internal static let DEF_VAL: Double = 0.0
+    internal static let DEF_ENG: Double = 0.0
+    internal static let DEF_START: Double = 0.0
+    internal static let DEF_END: Double = 1.0
+    internal static let DEF_STEP: Double = 0.5
+    internal static let DEF_MASS: Double = 1.0
+    
+    //Instance Variables
+    let initPt: Double
+    let initVal: Double
+    var domain: funcDomain
+    var engLvl: Double
+    var mass: Double
+    
+    @Published var storedVals: [Double]
+    internal var builtFlag: Bool = false
+    private var pot: genPotential
+    
+    init() {
+        //Setting up the equation constants
+        self.initPt = SchroeDeriv.DEF_PT
+        self.initVal = SchroeDeriv.DEF_VAL
+        self.domain = funcDomain(
+            nStart: SchroeDeriv.DEF_START,
+            nEnd: SchroeDeriv.DEF_END,
+            nStepSize: SchroeDeriv.DEF_STEP)
+        self.engLvl = SchroeDeriv.DEF_ENG
+        self.mass = SchroeDeriv.DEF_MASS
+        
+        //Setting up the potentials and building the function
+        self.storedVals = []
+        self.pot = genPotential(start: <#T##Double#>, end: <#T##Double#>, step: <#T##Double#>, energy: <#T##Double#>, pFunc: <#T##(Double) -> Double#>)
+    }
+    
+    init(start: Double, end: Double, step: Double, potential: genPotential, energy: Double) {
+        
+    }
+    
+    func Eval(val: Double) -> Double? {
+        return 0.0
+    }
+    
+    func makeIterator() -> funcDomainIterator {
+        return self.domain.makeIterator()
+    }
+}

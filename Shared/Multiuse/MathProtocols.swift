@@ -24,7 +24,7 @@ protocol Projector {
 /// A type of math function which is recurssive in nature
 protocol MathRecursive: Sequence {
     /// The initial point which this recursive function has information about
-    var initPt: [Double] { get }
+    var initPt: Double { get }
     
     /// The initial value at that particular point
     var initVal: Double { get }

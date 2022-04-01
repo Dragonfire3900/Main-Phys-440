@@ -33,12 +33,24 @@
 		A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */; };
 		A08ED1FE25CDEF3E00405126 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED1DF25CDEF3E00405126 /* TextView.swift */; };
 		A08ED1FF25CDEF3E00405126 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED1DF25CDEF3E00405126 /* TextView.swift */; };
-		A08ED20025CDEF3E00405126 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED1DF25CDEF3E00405126 /* TextView.swift */; };
-		A08ED20125CDEF3E00405126 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08ED1DF25CDEF3E00405126 /* TextView.swift */; };
 		A08ED21C25CDF07400405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED21B25CDF07400405126 /* CorePlot */; };
 		A08ED22325CDF0AC00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22225CDF0AC00405126 /* CorePlot */; };
 		A08ED22525CDF0C500405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22425CDF0C500405126 /* CorePlot */; };
 		A08ED22725CDF0CD00405126 /* CorePlot in Frameworks */ = {isa = PBXBuildFile; productRef = A08ED22625CDF0CD00405126 /* CorePlot */; };
+		A0CCD8D727C97E33001AE892 /* MathProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D627C97E33001AE892 /* MathProtocols.swift */; };
+		A0CCD8D927C97F3C001AE892 /* Schroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D827C97F3C001AE892 /* Schroe.swift */; };
+		A0CCD8DA27C97F3C001AE892 /* Schroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D827C97F3C001AE892 /* Schroe.swift */; };
+		A0CCD8DB27C97F3C001AE892 /* Schroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D827C97F3C001AE892 /* Schroe.swift */; };
+		A0CCD8DC27C97F3C001AE892 /* Schroe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D827C97F3C001AE892 /* Schroe.swift */; };
+		A0CCD8DF27C983EF001AE892 /* GenMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8DE27C983EF001AE892 /* GenMath.swift */; };
+		A0CCD8E027C983EF001AE892 /* GenMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8DE27C983EF001AE892 /* GenMath.swift */; };
+		A0CCD8E127C983EF001AE892 /* GenMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8DE27C983EF001AE892 /* GenMath.swift */; };
+		A0CCD8E227C983EF001AE892 /* GenMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8DE27C983EF001AE892 /* GenMath.swift */; };
+		A0CCD8E427D26B03001AE892 /* Potentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8E327D26B03001AE892 /* Potentials.swift */; };
+		A0CCD8E527D26B03001AE892 /* Potentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8E327D26B03001AE892 /* Potentials.swift */; };
+		A0CCD8E627D26B03001AE892 /* Potentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8E327D26B03001AE892 /* Potentials.swift */; };
+		A0CCD8E727D26B03001AE892 /* Potentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8E327D26B03001AE892 /* Potentials.swift */; };
+		A0CCD8E827D26CC6001AE892 /* MathProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CCD8D627C97E33001AE892 /* MathProtocols.swift */; };
 		A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3A425C33BD100107940 /* Tests_iOS.swift */; };
 		A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE3AF25C33BD100107940 /* Tests_macOS.swift */; };
 		A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */; };
@@ -74,6 +86,10 @@
 		A08ED1DD25CDEF3E00405126 /* operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operators.swift; sourceTree = "<group>"; };
 		A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePlotData.swift; sourceTree = "<group>"; };
 		A08ED1DF25CDEF3E00405126 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		A0CCD8D627C97E33001AE892 /* MathProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathProtocols.swift; sourceTree = "<group>"; };
+		A0CCD8D827C97F3C001AE892 /* Schroe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schroe.swift; sourceTree = "<group>"; };
+		A0CCD8DE27C983EF001AE892 /* GenMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenMath.swift; sourceTree = "<group>"; };
+		A0CCD8E327D26B03001AE892 /* Potentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Potentials.swift; sourceTree = "<group>"; };
 		A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_Phys_440App.swift; sourceTree = "<group>"; };
 		A0EFE38A25C33BCE00107940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0EFE38B25C33BD100107940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +149,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A0CCD8D427C97DE3001AE892 /* Multiuse */ = {
+			isa = PBXGroup;
+			children = (
+				A0CCD8D627C97E33001AE892 /* MathProtocols.swift */,
+				A0CCD8D827C97F3C001AE892 /* Schroe.swift */,
+				A0CCD8DE27C983EF001AE892 /* GenMath.swift */,
+			);
+			path = Multiuse;
+			sourceTree = "<group>";
+		};
+		A0CCD8D527C97DF7001AE892 /* dataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A0CCD8E327D26B03001AE892 /* Potentials.swift */,
+			);
+			path = dataFiles;
+			sourceTree = "<group>";
+		};
+		A0CCD8DD27C97F45001AE892 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A08ED1DF25CDEF3E00405126 /* TextView.swift */,
+				A0EFE38A25C33BCE00107940 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A0EFE38325C33BCE00107940 = {
 			isa = PBXGroup;
 			children = (
@@ -149,15 +192,16 @@
 		A0EFE38825C33BCE00107940 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				A0CCD8DD27C97F45001AE892 /* Views */,
+				A0CCD8D527C97DF7001AE892 /* dataFiles */,
+				A0CCD8D427C97DE3001AE892 /* Multiuse */,
 				A0EFE38925C33BCE00107940 /* Main_Phys_440App.swift */,
-				A0EFE38A25C33BCE00107940 /* ContentView.swift */,
 				A08ED1D825CDEF3E00405126 /* ChangingPlotParameters.swift */,
 				A08ED1D925CDEF3E00405126 /* CorePlot.swift */,
 				A08ED1DB25CDEF3E00405126 /* PlotDataClass.swift */,
 				A08ED1DC25CDEF3E00405126 /* TextExportDocument.swift */,
 				A08ED1DD25CDEF3E00405126 /* operators.swift */,
 				A08ED1DE25CDEF3E00405126 /* CalculatePlotData.swift */,
-				A08ED1DF25CDEF3E00405126 /* TextView.swift */,
 				A0EFE38B25C33BD100107940 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -301,7 +345,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					A0EFE38F25C33BD100107940 = {
 						CreatedOnToolsVersion = 12.4;
@@ -381,8 +425,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CCD8DF27C983EF001AE892 /* GenMath.swift in Sources */,
 				A0EFE3B425C33BD100107940 /* ContentView.swift in Sources */,
+				A0CCD8E427D26B03001AE892 /* Potentials.swift in Sources */,
+				A0CCD8D727C97E33001AE892 /* MathProtocols.swift in Sources */,
 				A08ED1FA25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0CCD8D927C97F3C001AE892 /* Schroe.swift in Sources */,
 				A08ED1F625CDEF3E00405126 /* operators.swift in Sources */,
 				A08ED1F225CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A08ED1EE25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
@@ -398,9 +446,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */,
+				A0CCD8DA27C97F3C001AE892 /* Schroe.swift in Sources */,
+				A0CCD8E027C983EF001AE892 /* GenMath.swift in Sources */,
 				A08ED1FB25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
 				A08ED1F725CDEF3E00405126 /* operators.swift in Sources */,
+				A0CCD8E827D26CC6001AE892 /* MathProtocols.swift in Sources */,
 				A08ED1F325CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				A0CCD8E527D26B03001AE892 /* Potentials.swift in Sources */,
 				A08ED1EF25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E725CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0EFE3B325C33BD100107940 /* Main_Phys_440App.swift in Sources */,
@@ -415,11 +467,13 @@
 			files = (
 				A08ED1E825CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FC25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0CCD8E627D26B03001AE892 /* Potentials.swift in Sources */,
 				A08ED1F825CDEF3E00405126 /* operators.swift in Sources */,
+				A0CCD8E127C983EF001AE892 /* GenMath.swift in Sources */,
 				A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */,
 				A08ED1F025CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A0CCD8DB27C97F3C001AE892 /* Schroe.swift in Sources */,
 				A08ED1F425CDEF3E00405126 /* TextExportDocument.swift in Sources */,
-				A08ED20025CDEF3E00405126 /* TextView.swift in Sources */,
 				A08ED1E425CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,11 +484,13 @@
 			files = (
 				A08ED1E925CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				A0CCD8E727D26B03001AE892 /* Potentials.swift in Sources */,
 				A08ED1F925CDEF3E00405126 /* operators.swift in Sources */,
+				A0CCD8E227C983EF001AE892 /* GenMath.swift in Sources */,
 				A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */,
 				A08ED1F125CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				A0CCD8DC27C97F3C001AE892 /* Schroe.swift in Sources */,
 				A08ED1F525CDEF3E00405126 /* TextExportDocument.swift in Sources */,
-				A08ED20125CDEF3E00405126 /* TextView.swift in Sources */,
 				A08ED1E525CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9NSB47G6YH;
@@ -641,6 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9NSB47G6YH;
