@@ -48,25 +48,32 @@ class PlotDataClass: NSObject, ObservableObject {
         
     }
     
-    func zeroData(){
-            
-            plotData = []
-            pointNumber = 1.0
+    func zeroData() {
+        plotData = []
+        pointNumber = 1.0
+    }
+    
+    func reserveData(pointNum: Int) {
+        plotData = []
+        
+        for _ in 0..<pointNum {
+            plotData.append(contentsOf: [[.X: 0.0, .Y: 0.0]])
             
         }
         
-        func appendData(dataPoint: [plotDataType])
-        {
-          
-            plotData.append(contentsOf: dataPoint)
-            pointNumber += 1.0
-            
-            
-            
+        pointNumber = Double(pointNum)
+    }
+        
+    func appendData(dataPoint: [plotDataType]) {
+        plotData.append(contentsOf: dataPoint)
+        pointNumber += 1.0
+    }
+    
+    func insertData(idx: Int, dataPoint: plotDataType) {
+        if idx < Int(pointNumber) {
+            plotData[idx] = dataPoint
         }
-    
-    
-
+    }
 }
 
 

@@ -96,7 +96,7 @@ public struct CorePlot: ViewRepresentable {
         // Create a plot area with color
         let theLineStyle = CPTMutableLineStyle()
         theLineStyle.miterLimit    = 1.0
-        theLineStyle.lineWidth     = 3.0
+        theLineStyle.lineWidth     = changingPlotParameters.lineWidth
         theLineStyle.lineColor     = changingPlotParameters.lineColor
         
         let linePlot = CPTScatterPlot(frame: .zero)
@@ -111,7 +111,7 @@ public struct CorePlot: ViewRepresentable {
         let plotSymbol = CPTPlotSymbol.ellipse()
         plotSymbol.fill          = CPTFill(color: changingPlotParameters.lineColor)
         plotSymbol.lineStyle     = symbolLineStyle
-        plotSymbol.size          = CGSize(width: 10.0, height: 10.0)
+        plotSymbol.size          = CGSize(width: changingPlotParameters.symSize, height: changingPlotParameters.symSize)
         linePlot.plotSymbol = plotSymbol
 
         // dataSourceLinePlot.dataSource set to the coordinator of the ViewRepresentable
@@ -119,7 +119,6 @@ public struct CorePlot: ViewRepresentable {
         
         // add lineplot to graph
         newGraph.add(linePlot)
-
         // return the View
         return hostView
         
@@ -160,7 +159,7 @@ public struct CorePlot: ViewRepresentable {
         
         let theLineStyle = CPTMutableLineStyle()
         theLineStyle.miterLimit    = 1.0
-        theLineStyle.lineWidth     = 3.0
+        theLineStyle.lineWidth     = changingPlotParameters.lineWidth
         theLineStyle.lineColor     = changingPlotParameters.lineColor
         
         // Add plot symbols
@@ -169,7 +168,7 @@ public struct CorePlot: ViewRepresentable {
         let plotSymbol = CPTPlotSymbol.ellipse()
         plotSymbol.fill          = CPTFill(color: changingPlotParameters.lineColor)
         plotSymbol.lineStyle     = symbolLineStyle
-        plotSymbol.size          = CGSize(width: 10.0, height: 10.0)
+        plotSymbol.size          = CGSize(width: changingPlotParameters.symSize, height: changingPlotParameters.symSize)
         
         //Update the data in the Coordinator
         context.coordinator.data = dataForPlot

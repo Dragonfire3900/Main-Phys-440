@@ -18,7 +18,8 @@ class ChangingPlotParameters: NSObject, ObservableObject {
     var yMax : Double = 2.0
     var yMin : Double = -1.0
     var xMin : Double = -1.0
+    var symSize: Double = 10.0
     var lineColor: CPTColor = .blue()
     var title: String = "Plot Title"
-    
+    var lineWidth: Double = 3.0
 }
