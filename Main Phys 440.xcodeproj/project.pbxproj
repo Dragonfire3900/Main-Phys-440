@@ -55,10 +55,6 @@
 		A0B848F327ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
 		A0B848F427ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
 		A0B848F527ADD63D005DC808 /* AbsSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F127ADD63D005DC808 /* AbsSimView.swift */; };
-		A0B848F727ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
-		A0B848F827ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
-		A0B848F927ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
-		A0B848FA27ADD6F9005DC808 /* ABSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B848F627ADD6F9005DC808 /* ABSimulator.swift */; };
 		A0B8490627ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
 		A0B8490727ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
 		A0B8490827ADE2BF005DC808 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B8490527ADE2BF005DC808 /* Point.swift */; };
@@ -84,6 +80,18 @@
 		A0EFE3B525C33BD100107940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EFE38A25C33BCE00107940 /* ContentView.swift */; };
 		A0EFE3B625C33BD100107940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EFE38B25C33BD100107940 /* Assets.xcassets */; };
 		A0EFE3B725C33BD100107940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EFE38B25C33BD100107940 /* Assets.xcassets */; };
+		D8C7874528EB5DAD002198E6 /* SnowSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874428EB5DAD002198E6 /* SnowSimView.swift */; };
+		D8C7874628EB5DAD002198E6 /* SnowSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874428EB5DAD002198E6 /* SnowSimView.swift */; };
+		D8C7874728EB5DAD002198E6 /* SnowSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874428EB5DAD002198E6 /* SnowSimView.swift */; };
+		D8C7874828EB5DAD002198E6 /* SnowSimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874428EB5DAD002198E6 /* SnowSimView.swift */; };
+		D8C7874B28EB5DC3002198E6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874928EB5DC3002198E6 /* Line.swift */; };
+		D8C7874C28EB5DC3002198E6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874928EB5DC3002198E6 /* Line.swift */; };
+		D8C7874D28EB5DC3002198E6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874928EB5DC3002198E6 /* Line.swift */; };
+		D8C7874E28EB5DC3002198E6 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874928EB5DC3002198E6 /* Line.swift */; };
+		D8C7874F28EB5DC3002198E6 /* PointCollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874A28EB5DC3002198E6 /* PointCollect.swift */; };
+		D8C7875028EB5DC3002198E6 /* PointCollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874A28EB5DC3002198E6 /* PointCollect.swift */; };
+		D8C7875128EB5DC3002198E6 /* PointCollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874A28EB5DC3002198E6 /* PointCollect.swift */; };
+		D8C7875228EB5DC3002198E6 /* PointCollect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7874A28EB5DC3002198E6 /* PointCollect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +123,6 @@
 		A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsorptionView.swift; sourceTree = "<group>"; };
 		A0B848EC27ADD3D8005DC808 /* ExponentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExponentialView.swift; sourceTree = "<group>"; };
 		A0B848F127ADD63D005DC808 /* AbsSimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsSimView.swift; sourceTree = "<group>"; };
-		A0B848F627ADD6F9005DC808 /* ABSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABSimulator.swift; sourceTree = "<group>"; };
 		A0B8490527ADE2BF005DC808 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		A0B8490A27ADE88B005DC808 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		A0CCD8B827BF07BD001AE892 /* OverlapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlapView.swift; sourceTree = "<group>"; };
@@ -135,6 +142,9 @@
 		A0EFE3AB25C33BD100107940 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EFE3AF25C33BD100107940 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A0EFE3B125C33BD100107940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C7874428EB5DAD002198E6 /* SnowSimView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnowSimView.swift; path = Shared/Snowflake/SnowSimView.swift; sourceTree = SOURCE_ROOT; };
+		D8C7874928EB5DC3002198E6 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Line.swift; path = Shared/Snowflake/Line.swift; sourceTree = SOURCE_ROOT; };
+		D8C7874A28EB5DC3002198E6 /* PointCollect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PointCollect.swift; path = Shared/Multiuse/PointCollect.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +204,9 @@
 			children = (
 				A0EB628825E078EE003AFF42 /* Particle.swift */,
 				A0B848E727ADD0CF005DC808 /* AbsorptionView.swift */,
+				D8C7874A28EB5DC3002198E6 /* PointCollect.swift */,
+				D8C7874428EB5DAD002198E6 /* SnowSimView.swift */,
 				A0B848F127ADD63D005DC808 /* AbsSimView.swift */,
-				A0B848F627ADD6F9005DC808 /* ABSimulator.swift */,
 			);
 			path = Absorption;
 			sourceTree = "<group>";
@@ -221,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				A0CCD8BB27BF0830001AE892 /* SnowView.swift */,
+				D8C7874928EB5DC3002198E6 /* Line.swift */,
 			);
 			path = Snowflake;
 			sourceTree = "<group>";
@@ -484,13 +496,15 @@
 				A0CCD8B927BF07BD001AE892 /* OverlapView.swift in Sources */,
 				A0AD495527B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F625CDEF3E00405126 /* operators.swift in Sources */,
+				D8C7874528EB5DAD002198E6 /* SnowSimView.swift in Sources */,
+				D8C7874F28EB5DC3002198E6 /* PointCollect.swift in Sources */,
 				A0CCD8BC27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F225CDEF3E00405126 /* TextExportDocument.swift in Sources */,
+				D8C7874B28EB5DC3002198E6 /* Line.swift in Sources */,
 				A0B848ED27ADD3D8005DC808 /* ExponentialView.swift in Sources */,
 				A08ED1EE25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E625CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0B8490B27ADE88B005DC808 /* Box.swift in Sources */,
-				A0B848F727ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 				A0EFE3B225C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 				A08ED1E225CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
 				A08ED1FE25CDEF3E00405126 /* TextView.swift in Sources */,
@@ -515,13 +529,15 @@
 				A08ED1EF25CDEF3E00405126 /* PlotDataClass.swift in Sources */,
 				A08ED1E725CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A0B8490C27ADE88B005DC808 /* Box.swift in Sources */,
-				A0B848F827ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 				A0EFE3B325C33BD100107940 /* Main_Phys_440App.swift in Sources */,
 				A08ED1E325CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
+				D8C7875028EB5DC3002198E6 /* PointCollect.swift in Sources */,
 				A08ED1FF25CDEF3E00405126 /* TextView.swift in Sources */,
 				A0B8490727ADE2BF005DC808 /* Point.swift in Sources */,
+				D8C7874C28EB5DC3002198E6 /* Line.swift in Sources */,
 				A0B848F327ADD63D005DC808 /* AbsSimView.swift in Sources */,
 				A0B848E927ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
+				D8C7874628EB5DAD002198E6 /* SnowSimView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,17 +551,19 @@
 				A0EB628B25E078EE003AFF42 /* Particle.swift in Sources */,
 				A08ED1E825CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FC25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				D8C7874728EB5DAD002198E6 /* SnowSimView.swift in Sources */,
 				A0AD495727B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F825CDEF3E00405126 /* operators.swift in Sources */,
 				A0EFE3A525C33BD100107940 /* Tests_iOS.swift in Sources */,
 				A08ED1F025CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				D8C7875128EB5DC3002198E6 /* PointCollect.swift in Sources */,
 				A0CCD8BE27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F425CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848EA27ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 				A08ED20025CDEF3E00405126 /* TextView.swift in Sources */,
+				D8C7874D28EB5DC3002198E6 /* Line.swift in Sources */,
 				A0B8490D27ADE88B005DC808 /* Box.swift in Sources */,
 				A08ED1E425CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
-				A0B848F927ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,17 +577,19 @@
 				A0EB628C25E078EE003AFF42 /* Particle.swift in Sources */,
 				A08ED1E925CDEF3E00405126 /* CorePlot.swift in Sources */,
 				A08ED1FD25CDEF3E00405126 /* CalculatePlotData.swift in Sources */,
+				D8C7874828EB5DAD002198E6 /* SnowSimView.swift in Sources */,
 				A0AD495827B70AD90070DC4D /* ExpSimView.swift in Sources */,
 				A08ED1F925CDEF3E00405126 /* operators.swift in Sources */,
 				A0EFE3B025C33BD100107940 /* Tests_macOS.swift in Sources */,
 				A08ED1F125CDEF3E00405126 /* PlotDataClass.swift in Sources */,
+				D8C7875228EB5DC3002198E6 /* PointCollect.swift in Sources */,
 				A0CCD8BF27BF0830001AE892 /* SnowView.swift in Sources */,
 				A08ED1F525CDEF3E00405126 /* TextExportDocument.swift in Sources */,
 				A0B848EB27ADD0CF005DC808 /* AbsorptionView.swift in Sources */,
 				A08ED20125CDEF3E00405126 /* TextView.swift in Sources */,
+				D8C7874E28EB5DC3002198E6 /* Line.swift in Sources */,
 				A0B8490E27ADE88B005DC808 /* Box.swift in Sources */,
 				A08ED1E525CDEF3E00405126 /* ChangingPlotParameters.swift in Sources */,
-				A0B848FA27ADD6F9005DC808 /* ABSimulator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
