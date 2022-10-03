@@ -1,3 +1,4 @@
+// A simulator view for discrete reccurrent maps. Mainly for showing Chaos
 //
 //  ContentView.swift
 //  Shared
@@ -11,22 +12,22 @@ import CorePlot
 typealias plotDataType = [CPTScatterPlotField : Double]
 
 struct DiscreteSim: View {
-    @EnvironmentObject var plotDataModel: PlotDataClass
-    @ObservedObject private var calculator = CalculatePlotData()
-    @State var mapSelect: DiscMaps = DiscMaps.log
-    @State var map: any genericMap
+    @ObservedObject var plotDataModel: PlotDataClass //The main plot for tracking a single set of values
+    @ObservedObject private var calculator = CalculatePlotData() //The calculator for single tracks
+    @State var mapSelect: DiscMaps = DiscMaps.log //An enum describing which map has been selected (used for the picker)
+    @State var map: any genericMap //The generic map instance which was selected
     
-    @State var bifScan: [Double] = [0.0, 4.0]
-    @State var bifInit: [Double] = [0.0, 1.0]
-    @State var scanNum: Double = 100
+    @State var bifScan: [Double] = [0.0, 4.0] //Where to scan along the parameter mu for the bifurcation diagram
+    @State var bifInit: [Double] = [0.0, 1.0] //The range for the initial values for the bifurcation scan
+    @State var scanNum: Double = 100 //The number of initial values to use
     
-    @State var randInit: Bool = true
+    @State var randInit: Bool = true //If a random initialization should be used for the bifurcation scan
     
     @ObservedObject private var bifCalc = CalculatePlotData()
-    @ObservedObject var bifDataModel: PlotDataClass = PlotDataClass(fromLine: false)
+    @ObservedObject var bifDataModel: PlotDataClass = PlotDataClass(fromLine: false) //The datamodel for plotting the bifurcation
     
-    @State var params: [String: Double] = [:]
-    @State private var start = 1.0
+    @State var params: [String: Double] = [:] //All of the parameters for all of the possible maps
+    @State private var start = 1.0 //Where the recurrent map should start
 
     var body: some View {
         HStack{
@@ -99,13 +100,14 @@ struct DiscreteSim: View {
         calculator.plotDataModel = self.plotDataModel
         
         //Calculate the new plotting data and place in the plotDataModel
-//        calculator.plotLogMap(start: start, mu: self.params["mu", default: 0.1], pts: 10)
         calculator.plotMap(map: self.map, start: [start], params: self.params, pts: 10)
     }
     
+    //Calculation for the bifurcation diagram
     func calcBifurcation() {
         bifCalc.plotDataModel = self.bifDataModel
         
+        //Calculate the data and place it in the data model
         bifCalc.plotBif(map: self.map, start: bifInit, params: self.params, muRange: self.bifScan, pts: Int(scanNum), genLength: 100)
     }
     
@@ -118,7 +120,6 @@ struct DiscreteSim: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DiscreteSim(map: logMap(firstVal: 1.0, mu: 0.1))
-            .environmentObject(PlotDataClass(fromLine: true))
+        DiscreteSim(plotDataModel: PlotDataClass(fromLine: true), map: logMap(firstVal: 1.0, mu: 0.1))
     }
 }

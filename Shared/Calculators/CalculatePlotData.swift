@@ -109,7 +109,7 @@ class CalculatePlotData: ObservableObject {
         
         let logMap = logMap(firstVal: start, mu: mu)
         
-        for (idx, res) in logMap.makeIterator(iterNum: pts).enumerated() {
+        for (idx, res) in logMap.makeIterator(iterNum: pts, stepSize: 1.0).enumerated() {
 
             plotDataModel!.insertData(idx: idx, dataPoint: [.X: Double(idx), .Y: res[0]])
             
@@ -133,7 +133,7 @@ class CalculatePlotData: ObservableObject {
         
         let tmpMap = type(of: map).init(currVal: start, params: params)
         
-        for (idx, res) in tmpMap.makeIterator(iterNum: pts, reset: true).enumerated() {
+        for (idx, res) in tmpMap.makeIterator(iterNum: pts, reset: true, stepSize: 1.0).enumerated() {
             plotDataModel!.insertData(idx: idx, dataPoint: [.X: Double(idx), .Y: res[0]])
         }
     }
@@ -169,7 +169,7 @@ class CalculatePlotData: ObservableObject {
             
             let tmpMap = type(of: map).init(currVal: [start], params: newParams)
             
-            for (iter, res) in tmpMap.makeIterator(iterNum: genLength + transGen, reset: false).enumerated() {
+            for (iter, res) in tmpMap.makeIterator(iterNum: genLength + transGen, reset: false, stepSize: 1.0).enumerated() {
                 if iter >= transGen {
                     plotDataModel!.insertData(idx: idx * genLength + iter - transGen, dataPoint: [.X: mu, .Y: res[0]])
                     

@@ -1,0 +1,107 @@
+// A simulator for the continuous systems. Really focuses on implementing a pendulum
+//
+//  ContuousSim.swift
+//  Main Phys 440
+//
+//  Created by Joel Kelsey on 10/2/22.
+//
+
+import SwiftUI
+
+struct ContuousSim: View {
+    @ObservedObject var plotDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for position
+    @ObservedObject var phaseDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for the phase space
+    
+    @ObservedObject private var calculator = CalculatePlotData() //Calculator for everything
+    
+    @State var map: any genericMap //The map which is used for the continuous setup
+    
+    @State var params: [String: Double] = [:] //All of the parameters for all maps
+    @State private var start = 1.0 //Where the pendulum starts
+    @State private var sVel = 1.0 //What the initial speed is of the pendulum
+    @State private var timeS = 0.5 //What the time step size is
+    @State private var pts = 100.0 //The number of points to predict
+    
+    var body: some View {
+        HStack {
+            VStack {
+                DynamSlider(lowLim: 0, upLim: 5, stepSize: 0.2, name: "Initial Angle", valBind: $start)
+                DynamSlider(lowLim: 0, upLim: 5, stepSize: 0.2, name: "Initial Velocity", valBind: $sVel)
+                
+                ForEach(map.getKeys(), id: \.self) { (key) in
+                    DynamSlider(lowLim: 0, upLim: 1, stepSize: 0.1, name: key.capitalized, valBind: getBinding(key: key))
+                }
+                
+                HStack {
+                    Button("Calc Pendulum", action: {self.calcTrajectory(map: self.map, start: [start, sVel], params: self.params, pts: Int(pts), timeStep: timeS)})
+                    
+                    Text("Time Step:")
+                    DoubleTextField(dVal: $timeS)
+                    
+                    Text("Point Num:")
+                    DoubleTextField(dVal: $pts)
+                }
+            }
+            
+            CorePlot(dataForPlot: $plotDataModel.plotData, changingPlotParameters: $plotDataModel.changingPlotParameters)
+                .setPlotPadding(left: 1)
+                .setPlotPadding(right: 1)
+                .setPlotPadding(top: 1)
+                .setPlotPadding(bottom: 1)
+                .padding(5)
+            
+            CorePlot(dataForPlot: $phaseDataModel.plotData, changingPlotParameters: $phaseDataModel.changingPlotParameters)
+                .setPlotPadding(left: 1)
+                .setPlotPadding(right: 1)
+                .setPlotPadding(top: 1)
+                .setPlotPadding(bottom: 1)
+                .padding(5)
+        }
+    }
+    
+    func getBinding(key: String) -> Binding<Double> {
+        return Binding(get: { return self.params[key, default: 0.1] },
+            set: { newVal in self.params[key] = newVal}
+        )
+    }
+    
+    func calcTrajectory(map: any genericMap, start: [Double], params: [String: Double], pts: Int, timeStep: Double) {
+        //set the Plot Parameters
+        plotDataModel.changingPlotParameters.yMax = 10
+        plotDataModel.changingPlotParameters.yMin = -3.0
+        plotDataModel.changingPlotParameters.xMax = 10.0
+        plotDataModel.changingPlotParameters.xMin = -3.0
+        plotDataModel.changingPlotParameters.xLabel = "Iteration Number"
+        plotDataModel.changingPlotParameters.yLabel = "Pendulum Angle"
+        plotDataModel.changingPlotParameters.lineColor = .blue()
+        plotDataModel.changingPlotParameters.title = "Pendulum Position"
+        
+        //set the Phase Parameters
+        phaseDataModel.changingPlotParameters.yMax = 10
+        phaseDataModel.changingPlotParameters.yMin = -3.0
+        phaseDataModel.changingPlotParameters.xMax = 10.0
+        phaseDataModel.changingPlotParameters.xMin = -3.0
+        phaseDataModel.changingPlotParameters.xLabel = "Pendulum Angle"
+        phaseDataModel.changingPlotParameters.yLabel = "Anguluar Velocity"
+        phaseDataModel.changingPlotParameters.lineColor = .blue()
+        phaseDataModel.changingPlotParameters.title = "Phase Plot"
+        
+        if plotDataModel.pointNumber != Double(pts) {
+            plotDataModel.reserveData(pointNum: pts)
+            phaseDataModel.reserveData(pointNum: pts)
+        }
+        
+        let tmpMap = type(of: map).init(currVal: start, params: params)
+        
+        for (idx, res) in tmpMap.makeIterator(iterNum: pts, reset: true, stepSize: timeStep).enumerated() {
+            plotDataModel.insertData(idx: idx, dataPoint: [.X: Double(idx) * timeStep, .Y: res[0]])
+            phaseDataModel.insertData(idx: idx, dataPoint: [.X: res[0], .Y: res[1]])
+        }
+    }
+}
+
+struct ContuousSim_Previews: PreviewProvider {
+    static var previews: some View {
+        ContuousSim(map: pendulumMap(currVal: [1.0, 1.0], params: ["w": 0.1, "a": 0.1, "f":0.1]))
+    }
+}

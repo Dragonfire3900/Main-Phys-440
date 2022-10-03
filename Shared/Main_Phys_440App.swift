@@ -18,11 +18,15 @@ struct Main_Phys_440App: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                DiscreteSim(map: map)
-                    .environmentObject(plotDataModel)
+                DiscreteSim(plotDataModel: plotDataModel, map: map)
                     .tabItem {
                         Text("Discrete Sim")
                     }
+                ContuousSim(map: pendulumMap(currVal: [1.0, 1.0], params: ["w": 0.1, "a": 0.1, "f":0.1]))
+                    .tabItem {
+                        Text("Continuous Sim")
+                    }
+                
                 TextView()
                     .environmentObject(plotDataModel)
                     .tabItem {
