@@ -91,30 +91,6 @@ class CalculatePlotData: ObservableObject {
         
         return
     }
- 
-    func plotLogMap(start: Double, mu: Double, pts: Int) {
-        //set the Plot Parameters
-        plotDataModel!.changingPlotParameters.yMax = 10
-        plotDataModel!.changingPlotParameters.yMin = -3.0
-        plotDataModel!.changingPlotParameters.xMax = 10.0
-        plotDataModel!.changingPlotParameters.xMin = -3.0
-        plotDataModel!.changingPlotParameters.xLabel = "x"
-        plotDataModel!.changingPlotParameters.yLabel = "log map value"
-        plotDataModel!.changingPlotParameters.lineColor = .blue()
-        plotDataModel!.changingPlotParameters.title = "Log Map Plot"
-
-        if plotDataModel!.pointNumber != Double(pts) {
-            plotDataModel!.reserveData(pointNum: pts)
-        }
-        
-        let logMap = logMap(firstVal: start, mu: mu)
-        
-        for (idx, res) in logMap.makeIterator(iterNum: pts, stepSize: 1.0).enumerated() {
-
-            plotDataModel!.insertData(idx: idx, dataPoint: [.X: Double(idx), .Y: res[0]])
-            
-        }
-    }
     
     func plotMap(map: genericMap, start: [Double], params: [String: Double], pts: Int) {
         //set the Plot Parameters

@@ -21,17 +21,22 @@ struct ContuousSim: View {
     @State var map: any shroeMap //The map which is used for the continuous setup
     
     @State var params: [String: Double] = [:] //All of the parameters for all maps
-    @State private var start = 1.0 //Where the
-    @State private var timeS = 0.5 //What the time step size is
+    @State private var start = 0.0 //Where the
+    @State private var timeS = 0.01 //What the time step size is
     @State private var pts = 100.0 //The number of points to predict
     
     var body: some View {
         HStack {
             VStack {
-                Picker("Schroedinger Selection", $mapSelect)
-                    .onChange(of: mapSelect) {
-                        self.map = mapSelect.actMap
+                Picker("Schroedinger Selection", selection: $mapSelect) {
+                    ForEach(ShroeMaps.allCases) { mapType in
+                        Text("\(mapType.rawValue.capitalized) Simulation")
                     }
+                }
+                .onChange(of: mapSelect) { sel in
+                    self.map = sel.actMap
+                }
+                .padding(7)
                 
                 ForEach(map.getKeys(), id: \.self) { (key) in
                     DynamSlider(lowLim: 0, upLim: 1, stepSize: 0.1, name: key.capitalized, valBind: getBinding(key: key))
@@ -78,10 +83,18 @@ struct ContuousSim: View {
             plotDataModel.reserveData(pointNum: pts)
         }
         
-        let tmpMap = type(of: map).init(currVal: start, params: params)
+        var tmpStore = [shroeMap.T]()
         
-        for (idx, res) in tmpMap.makeIterator(iterNum: pts, reset: true, stepSize: timeStep).enumerated() {
-            plotDataModel.insertData(idx: idx, dataPoint: [.X: Double(idx) * timeStep, .Y: res[0]])
+        let tmpMap = type(of: map).init(currVal: start, params: params)
+        var norm = 0.0
+        
+        for res in tmpMap.makeIterator(iterNum: pts, reset: true, stepSize: timeStep) {
+            norm += pow(res[0], 2)*timeStep
+            tmpStore.append(res[0])
+        }
+        
+        for (idx, res) in tmpStore.enumerated() {
+            plotDataModel.insertData(idx: idx, dataPoint: [.X: Double(idx) * timeStep, .Y: res / norm])
         }
     }
 }
