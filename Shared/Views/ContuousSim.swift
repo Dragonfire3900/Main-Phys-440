@@ -7,6 +7,9 @@
 //
 
 import SwiftUI
+import CorePlot
+
+typealias plotDataType = [CPTScatterPlotField : Double]
 
 struct ContuousSim: View {
     @ObservedObject var plotDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for position
