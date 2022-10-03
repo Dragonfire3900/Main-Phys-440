@@ -8,6 +8,19 @@
 
 import Foundation
 
+enum ShroeMaps: String, CaseIterable, Identifiable {
+    case box
+    var id: Self { self }
+}
+
+extension ShroeMaps {
+    var actMap: any genericMap {
+        switch self {
+        case .box: return boxShroe(currVal: [], params: [:])
+        }
+    }
+}
+
 protocol shroeMap: genericMap {
     var hBar2: T { get }
     var pos: T { get set }
@@ -60,5 +73,27 @@ extension shroeMap {
     func secondDeriv(val: [T], pos: T) -> T {
         let hBar2 = 7.63
         return 2.0 / hBar2 * engFunc(pos: pos) * val[0]
+    }
+}
+
+class boxShroe: shroeMap {
+    var pos: T = 0.0
+    var currVal: [T]
+    var params: [String : T] = [:]
+    
+    required init(currVal: [Double], params: [String : Double]) {
+        self.currVal = [0.0, 0.0]
+        
+        self.params["Energy"] = params["Energy", default: 2.0]
+        self.params["Box Energy"] = params["Box Energy", default: 0.1]
+        self.params["Box Width"] = abs(params["Box Width", default: 1.0])
+    }
+    
+    func engFunc(pos: T) -> T {
+        if pos >= 0 && pos <= params["Box Width", default: 1.0] {
+            return params["Energy", default: 2.0] - params["Box Energy", default: 0.1]
+        } else {
+            return -1.0 * T.infinity
+        }
     }
 }

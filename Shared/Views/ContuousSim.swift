@@ -14,6 +14,7 @@ struct ContuousSim: View {
     
     @ObservedObject private var calculator = CalculatePlotData() //Calculator for everything
     
+    @State var mapSelect: ShroeMaps = ShroeMaps.box
     @State var map: any shroeMap //The map which is used for the continuous setup
     
     @State var params: [String: Double] = [:] //All of the parameters for all maps
@@ -24,14 +25,17 @@ struct ContuousSim: View {
     var body: some View {
         HStack {
             VStack {
-                DynamSlider(lowLim: 0, upLim: 5, stepSize: 0.2, name: "Initial Angle", valBind: $start)
+                Picker("Schroedinger Selection", $mapSelect)
+                    .onChange(of: mapSelect) {
+                        self.map = mapSelect.actMap
+                    }
                 
                 ForEach(map.getKeys(), id: \.self) { (key) in
                     DynamSlider(lowLim: 0, upLim: 1, stepSize: 0.1, name: key.capitalized, valBind: getBinding(key: key))
                 }
                 
                 HStack {
-                    Button("Calc Pendulum", action: {self.calcTrajectory(map: self.map, start: [start], params: self.params, pts: Int(pts), timeStep: timeS)})
+                    Button("Calc Wavefunction", action: {self.calcTrajectory(map: self.map, start: [start], params: self.params, pts: Int(pts), timeStep: timeS)})
                     
                     Text("Time Step:")
                     DoubleTextField(dVal: $timeS)
@@ -81,6 +85,6 @@ struct ContuousSim: View {
 
 struct ContuousSim_Previews: PreviewProvider {
     static var previews: some View {
-        ContuousSim(map: pendulumMap(currVal: [1.0, 1.0], params: ["w": 0.1, "a": 0.1, "f":0.1]))
+        ContuousSim(map: boxShroe(currVal: [], params: [:]))
     }
 }

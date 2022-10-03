@@ -15,9 +15,9 @@ struct Main_Phys_440App: App {
     var body: some Scene {
         WindowGroup {
             TabView {
-                ContuousSim(map: pendulumMap(currVal: [1.0, 1.0], params: ["w": 0.1, "a": 0.1, "f":0.1]))
+                ContuousSim(map: boxShroe(currVal: [], params: [:]))
                     .tabItem {
-                        Text("Continuous Sim")
+                        Text("Schroedinger Sim")
                     }
                 
                 TextView()
