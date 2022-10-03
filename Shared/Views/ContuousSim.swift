@@ -10,15 +10,14 @@ import SwiftUI
 
 struct ContuousSim: View {
     @ObservedObject var plotDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for position
-    @ObservedObject var phaseDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for the phase space
+//    @ObservedObject var phaseDataModel: PlotDataClass = PlotDataClass(fromLine: true) //Plot for the phase space
     
     @ObservedObject private var calculator = CalculatePlotData() //Calculator for everything
     
-    @State var map: any genericMap //The map which is used for the continuous setup
+    @State var map: any shroeMap //The map which is used for the continuous setup
     
     @State var params: [String: Double] = [:] //All of the parameters for all maps
-    @State private var start = 1.0 //Where the pendulum starts
-    @State private var sVel = 1.0 //What the initial speed is of the pendulum
+    @State private var start = 1.0 //Where the
     @State private var timeS = 0.5 //What the time step size is
     @State private var pts = 100.0 //The number of points to predict
     
@@ -26,14 +25,13 @@ struct ContuousSim: View {
         HStack {
             VStack {
                 DynamSlider(lowLim: 0, upLim: 5, stepSize: 0.2, name: "Initial Angle", valBind: $start)
-                DynamSlider(lowLim: 0, upLim: 5, stepSize: 0.2, name: "Initial Velocity", valBind: $sVel)
                 
                 ForEach(map.getKeys(), id: \.self) { (key) in
                     DynamSlider(lowLim: 0, upLim: 1, stepSize: 0.1, name: key.capitalized, valBind: getBinding(key: key))
                 }
                 
                 HStack {
-                    Button("Calc Pendulum", action: {self.calcTrajectory(map: self.map, start: [start, sVel], params: self.params, pts: Int(pts), timeStep: timeS)})
+                    Button("Calc Pendulum", action: {self.calcTrajectory(map: self.map, start: [start], params: self.params, pts: Int(pts), timeStep: timeS)})
                     
                     Text("Time Step:")
                     DoubleTextField(dVal: $timeS)
@@ -44,13 +42,6 @@ struct ContuousSim: View {
             }
             
             CorePlot(dataForPlot: $plotDataModel.plotData, changingPlotParameters: $plotDataModel.changingPlotParameters)
-                .setPlotPadding(left: 1)
-                .setPlotPadding(right: 1)
-                .setPlotPadding(top: 1)
-                .setPlotPadding(bottom: 1)
-                .padding(5)
-            
-            CorePlot(dataForPlot: $phaseDataModel.plotData, changingPlotParameters: $phaseDataModel.changingPlotParameters)
                 .setPlotPadding(left: 1)
                 .setPlotPadding(right: 1)
                 .setPlotPadding(top: 1)
@@ -76,26 +67,14 @@ struct ContuousSim: View {
         plotDataModel.changingPlotParameters.lineColor = .blue()
         plotDataModel.changingPlotParameters.title = "Pendulum Position"
         
-        //set the Phase Parameters
-        phaseDataModel.changingPlotParameters.yMax = 10
-        phaseDataModel.changingPlotParameters.yMin = -3.0
-        phaseDataModel.changingPlotParameters.xMax = 10.0
-        phaseDataModel.changingPlotParameters.xMin = -3.0
-        phaseDataModel.changingPlotParameters.xLabel = "Pendulum Angle"
-        phaseDataModel.changingPlotParameters.yLabel = "Anguluar Velocity"
-        phaseDataModel.changingPlotParameters.lineColor = .blue()
-        phaseDataModel.changingPlotParameters.title = "Phase Plot"
-        
         if plotDataModel.pointNumber != Double(pts) {
             plotDataModel.reserveData(pointNum: pts)
-            phaseDataModel.reserveData(pointNum: pts)
         }
         
         let tmpMap = type(of: map).init(currVal: start, params: params)
         
         for (idx, res) in tmpMap.makeIterator(iterNum: pts, reset: true, stepSize: timeStep).enumerated() {
             plotDataModel.insertData(idx: idx, dataPoint: [.X: Double(idx) * timeStep, .Y: res[0]])
-            phaseDataModel.insertData(idx: idx, dataPoint: [.X: res[0], .Y: res[1]])
         }
     }
 }
